@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>PIZZA HOME</title>
-    <link type="text/css" href="../../css/estilos.css" rel="stylesheet">
+    <title>MENU</title>
+    <link type="text/css" href="../../css/cssMenu.css" rel="stylesheet">
 
 </head>
 
@@ -39,19 +39,63 @@
         </div>
     </header>
     <div class="contenido">
-        <article class="imagenesContenido">
-            <img src="" alt="Imagenes promociones" id="imagen">
+        <article class="caja1">
+            <h2 class="headCatego">
+                ---CREA TU PIZZA---
+            </h2>
+            <div>
+                <img src="../../imagenes/img/pizzas/crea tu pizza/tuPizza.jpeg" alt="imgcontenido">
+                <h4>Escoge tu masa favorita con los dos Ingredientes que más te gusten.</h4>
+            </div>
+
         </article>
-        <div class="caracteristicas">
-            <article class="cajaCarac">
-
-                <h4>BIENVENIDO A <img src="../../imagenes/iconos/pizzaHome2.png" alt="Cobertura Local"></h4>
-                <p>Si quieres pedir comida a domicilio, Pizza Home es la mejor opción. Elige tu pizza favorita o
-                    cualquiera de los productos de nuestra carta y aplica las mejores promociones. En unos minutos te
-                    llevamos la comida a casa</p>
-            </article>
-
-        </div>
+        <article class="caja2">
+            <h2 class="headCatego">
+                ---LOVERS---
+            </h2>
+            <div>
+                <img src="../../imagenes/img/pizzas/lovers/piizaHawayaLov.jpeg" alt="imgcontenido">
+                <h4>¿Te gusta la Hawaiana? La hicimos especial, la hicimos Lovers. ¡Pruébala!</h4>
+            </div>
+            <div>
+                <img src="../../imagenes/img/pizzas/lovers/pizzaJamonLov.jpeg" alt="imgcontenido">
+                <h4>¿Amante del Jamón y Lovers? ¡Anímate! Escoge tu masa y deleita tu Lovers de Jamón.</h4>
+            </div>
+            <div>
+                <img src="../../imagenes/img/pizzas/lovers/pizzaPeperoniLov.jpeg" alt="imgcontenido">
+                <h4>¿Amante del Pepperoni y de las Lovers? ¡Anímate! Escoge tu masa, y deleita tu Lovers de Pepperoni .
+                </h4>
+            </div>
+            <div>
+                <img src="../../imagenes/img/pizzas/lovers/pizzaVegiLov.jpeg" alt="imgcontenido">
+                <h4>Para los amantes de las Lovers y los Veggie. Exclusividad como ninguna.</h4>
+            </div>
+        </article>
+        <article class="caja3">
+            <h2 class="headCatego">
+                ---SUPREMAS---
+            </h2>
+            <div>
+                <img src="../../imagenes/img/pizzas/supremas/pizzaBBQSup.jpeg" alt="imgcontenido">
+                <h4>Una rica combinación de Fajitas de Pollo, Tocino, Cebolla,
+                    Champiñon y Topping de BBQ.</h4>
+            </div>
+            <div>
+                <img src="../../imagenes/img/pizzas/supremas/pizzaMeatSup.jpeg" alt="imgcontenido">
+                <h4>¿Querías más?. La convertimos Suprema, prueba tu especialidad Meat con nuestro suculento Tocino.
+                </h4>
+            </div>
+            <div>
+                <img src="../../imagenes/img/pizzas/supremas/pizzaSuperSup.jpeg" alt="imgcontenido">
+                <h4>Conoce nuestra especialidad súper. Prueba la Súper Suprema una deliciosa combinación de Vegetales,
+                    Jamón, Pepperoni y Salchicha.</h4>
+            </div>
+            <div>
+                <img src="../../imagenes/img/pizzas/supremas/pizzaSuprema.jpeg" alt="imgcontenido">
+                <h4>Conoce nuestra especialidad. Prueba la Suprema una deliciosa combinación de Vegetales, Pepperoni y
+                    Salchicha.</h4>
+            </div>
+        </article>
     </div>
     <footer>
         <div class="pieNombre">
@@ -94,23 +138,5 @@
         </div>
     </footer>
 </body>
-<script> /*  scrip para rotar imagenes*/
-
-    var imagenes = new Array();
-    for (var i = 1; i <= 4; i++) {
-        imagenes[i] = "../../imagenes/img/imgCont" + i.toString() + '.png';
-    }
-
-    function rotarImagenes() {
-        var index = Math.floor(Math.random() * (4 - 1)) + 1;
-
-        document.getElementById("imagen").src = imagenes[index];
-    }
-
-    onload = function () {
-        rotarImagenes();
-        setInterval(rotarImagenes, 5000);
-    }
-</script>
 
 </html>

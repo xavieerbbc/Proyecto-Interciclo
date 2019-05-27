@@ -86,7 +86,9 @@
     float: left;
 }
 
-
+.menu li a:hover {
+    background-color: rgb(167, 53, 0);
+}
 
 .menu li ul{
     display: none ;
@@ -128,7 +130,7 @@
 
 body {
     background-color: rgb(61, 44, 37);
-    background-image: url(../imagenes/img/fondo.jpg);
+    background-image: url(../imagenes/img/ingredientes-pizza-costuras_1176-269.jpg);
 
 }
 
@@ -182,24 +184,27 @@ body {
 }
 
 .contenido h2{
-    color: rgb(134, 224, 209);
+    color:  rgb(207, 169, 0);
     text-align: center;
 }
 
 .contenido h4{
-    color: #CFD8DC;
+    color: white;
     margin: 10px;
     padding: 5px;
     text-align-last: center;
 }
 
 .contenido div{
-    border: 5px rgb(255, 255, 255) solid;
+    border: 1px rgb(255, 255, 255) solid;
+    background-color: rgb(58, 58, 58);
 }
 
-
+.contenido1{
+    background-color: rgb(58, 58, 58);
+}
 .contenido1 h2{
-    color: rgb(134, 224, 209);
+    color: rgb(207, 169, 0);
     text-align: center;
 }
 
@@ -221,7 +226,7 @@ body {
 
 .contenido1 h2{
     padding: 10px 20px;
-    color:darkturquoise ;
+    color:rgb(207, 169, 0);
     text-align: center;
 }
 

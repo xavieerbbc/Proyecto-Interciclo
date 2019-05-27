@@ -198,6 +198,37 @@ body {
 }
 
 
+.contenido1 h2{
+    color: rgb(134, 224, 209);
+    text-align: center;
+}
+
+.upsLog{
+    float: left;
+}
+ 
+.contenido1 img{
+    padding: 80px 5px;
+    display: block;
+    float: left;
+}
+
+.contenido1 h3{
+    padding: 15px 250px;
+    color: white;
+    text-align: center;
+}
+
+.contenido1 h2{
+    padding: 10px 20px;
+    color:darkturquoise ;
+    text-align: center;
+}
+
+.upsLog{
+    float: left !important;
+    padding: 0px 40px;;
+}
 /* ESTILOS PARA EL FOOTER*/
 
 .contenidoPie{

@@ -286,4 +286,7 @@ body {
     background-image: url(../imagenes/img/fondo.jpg);
 
 }
-
+#imgcombo {
+    width:400px;
+    height:200px;
+}

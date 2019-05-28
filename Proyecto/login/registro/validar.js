@@ -27,7 +27,7 @@ function validar(){
 }
 
 function limpiar(){
-  for(var i = 0; i < document.forms[0].length ; i++){
+  for(var i = 0 ; i < document.forms[0].length ; i++){
         var elemento = document.forms[0].elements[i]
         if(elemento.id == 'botonA' || elemento.id == 'botonB'){
             

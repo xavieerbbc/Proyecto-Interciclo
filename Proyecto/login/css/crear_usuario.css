@@ -62,7 +62,7 @@ input{
     background:white;
     opacity: 0.5;
     border-radius: 20px;
-    color: black;    
+    color: rgb(16, 16, 17);    
     
 } 
 #boton{
@@ -72,7 +72,7 @@ input{
     border: 0;
     text-align: center;
     background: linear-gradient(to bottom,green,yellow);
-    color:black;
+    color:rgb(17, 16, 16);
     margin-top: 1px;
     font-family: rale;
 }
@@ -88,6 +88,8 @@ input{
     border: 0;
     border-radius: 5px;
 }
-
+label{
+    color:rgb(12, 175, 26);
+}
 
 

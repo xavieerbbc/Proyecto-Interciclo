@@ -8,6 +8,7 @@
     <title>Practica Hipermedial</title>
     <link rel="stylesheet" href="../../login/css/crear_usuario.css">
     <link rel="stylesheet" href="../../login/css/cabecera.css">
+    <script type="text/javascript" src="../registro/validar.js"></script>
 </head>
 
 <body>
@@ -31,18 +32,43 @@
     <br>
 
     <div class="contenedor">
-        <form action="../controladores/crear_usuario.php" method="POST" enctype="multipart/form-data">
+        <form action="../controladores/crear_usuario.php" method="post" onsubmit="return validar()">
 
             <h2>Usuario Nuevo</h2>
 
-            <input type="text" name="cedula" placeholder="Cedula" required>
-            <input type="text" name="nombres" placeholder="Nombre" required>
-            <input type="text" name="apellidos" placeholder="Apellido" required>
-            <input type="text" name="direccion" placeholder="Direccion" required>
-            <input type="text" name="telefono" placeholder="Telefono" required>
-            <input type="email" name="correo" placeholder="Email" required>
-            <input type="date" name="fechaNacimiento" required>
-            <input type="password" name="contrasena" placeholder="Contraseña">
+            <p>
+                <label for="nombres">Nombres</label>
+                <input type="text" name="nombres" id="nombres" onkeyup="validarLetras(this,'nombres')">
+            </p>
+            <p>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" id="apellidos" onkeyup="validarLetras(this,'apellidos')">
+            </p>
+            <p>
+                <label for="cedula">Cedula</label>
+                <input type="text" name="cedula" id="cedula" onkeyup="validarCedula();validarNumeros(this,'cedula')">
+            </p>
+            <p>
+                <label for="telefono">Telefono</label>
+                <input type="text" name="telefono" id="telefono"
+                    onkeyup="validarTelefono();validarNumeros(this,'telefono')">
+            </p>
+            <p>
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" id="direccion" onkeyup="validarLetras(this,'direccion')">
+            </p>
+            <p>
+                <label for="fecha">Fecha de Nacimiento</label>
+                <input type="text" name="fechaNacimiento" id="fechaNacimiento" onkeyup="validarFecha()">
+            </p>
+            <p>
+                <label for="correo">Correo</label>
+                <input type="text" name="correo" id="correo" onkeyup="validarCorreo()">
+            </p>
+            <p>
+                <label for="contrasena">Contraseña</label>
+                <input type="password" name="contrasena" id="contrasena">
+            </p>
             
             <div class="foto">
                 <img class="perfil" src="../imagenes/foto.jpg" alt="">
@@ -50,8 +76,9 @@
                 <input type="file" name="foto" id="foto">
             </div>
             <input id="boton" type="submit" value="Registrar" required>
+            <input id="boton" type="reset" value="Cancelar" required onclick="limpiar()">
         </form>
-       
+
     </div>
 
 </body>

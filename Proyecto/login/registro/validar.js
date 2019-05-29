@@ -12,7 +12,7 @@ function validar(){
         alert("Cedula Incorrecta")
     }
     if(banderaE == false){
-        alert("El correo debe tener mas de tres caracteres antes del @ y tener el  dominio gmail.com o pizzaadmi.com")
+        alert("El correo debe tener mas de tres caracteres antes del @ y tener el  dominio  pizzaadmi.com para el administrador")
     }
     if(banderaF == false){
         alert("Fecha Incorretca su fecha debe estar con el formato dd/mm/yyyy o su fecha no es valida")
@@ -143,7 +143,7 @@ function validarCorreo(){
     if(correo[0].length <= 3 ){
         document.getElementById("correo").style.background = "rgba(255,0,0,0.2)"
         return false
-    }else if(correo[1] != "gmail.com" && correo[1] != "pizzaadmi.com"){
+    }else if(correo[1] != " " && correo[1] != " "){
         document.getElementById("correo").style.background = "rgba(255,0,0,0.2)"
         return false
     }else{

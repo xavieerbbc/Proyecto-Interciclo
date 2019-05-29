@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Market Online Las Americas</title>
+    <title>Pizzeria Las Americas</title>
     <meta name="google-site-verification" content="Tt2oSyF04JgsvnJIruF9N3-u9nRhPbSB2MjgM6PSvBY" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/listados.css">
@@ -62,14 +62,10 @@
 
 <footer>
     <div id="pie">
-        <p>
-            Desarrollado por:<br> Jonathan Matute &#8226; Doménica Merchán &#8226; Mark Orellana &#8226; René Panjón
-            &#8226; John Tenesaca
-        </p>
-        <a href="https://www.ups.edu.ec" target="_blank"><img style="width: 150px" src="img/ups.png"
-                alt="logo de la Universidad Politecnica Salesiana"></a>
-        <p><sub>&#169;</sub><em> Todos los derechos reservados</em></p>
-        <br>
+    
+        <p>Desarrollado por: Bryam Barrera, Wilmer Durazno, Javier Yunga, Mateo Cordova, Daniel Peralta</p>
+        <p>Copyright &copy; 2019 Todos los derechos reservados</p>
+
     </div>
 </footer>
 

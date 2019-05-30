@@ -129,7 +129,7 @@
 /* ESTILOS PARA EL BODY DE HOME.HTML */
 
 body {
-    background-color: rgb(61, 44, 37);
+    
     background-image: url(../imagenes/img/ingredientes-pizza-costuras_1176-269.jpg);
 
 }
@@ -200,9 +200,7 @@ body {
     background-color: rgb(58, 58, 58);
 }
 
-.contenido1{
-    background-color: rgb(58, 58, 58);
-}
+
 .contenido1 h2{
     color: rgb(207, 169, 0);
     text-align: center;
@@ -220,7 +218,7 @@ body {
 
 .contenido1 h3{
     padding: 15px 250px;
-    color: white;
+    color: rgb(22, 236, 218);
     text-align: center;
 }
 

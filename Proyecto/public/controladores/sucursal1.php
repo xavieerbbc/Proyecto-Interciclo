@@ -66,12 +66,10 @@
 </body>
 
 <footer>
-    <div id="pie">
-    
-        <p>Desarrollado por: Bryam Barrera, Wilmer Durazno, Javier Yunga, Mateo Cordova, Daniel Peralta</p>
-        <p>Copyright &copy; 2019 Todos los derechos reservados</p>
-
-    </div>
+<div class="derechos">
+            <p>Desarrollado por: Bryam Barrera, Wilmer Durazno, Javier Yunga, Mateo Cordova, Daniel Peralta</p>
+            <p>Copyright &copy; 2019 Todos los derechos reservados</p>
+        </div>
 </footer>
 
 </html>

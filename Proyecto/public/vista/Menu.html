@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <title>MENU</title>
     <link type="text/css" href="../../css/cssMenu.css" rel="stylesheet">
-    
-
 </head>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<link rel="stylesheet" href="../../calificacion/css/bootstrap.min.css">
+<script src="../../calificacion/js/bootstrap.min.js"></script>
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<link href="../../calificacion/css/starrr.css" rel=stylesheet />
+<script src="../../calificacion/js/starrr.js"></script>
 
 <body>
     <header>
@@ -62,10 +70,17 @@
                 ---LOVERS---
             </h2>
             <div>
+                </p>
+                <hr />
+                Calificar: <span id="Estrellas"></span>
+                <hr />
+                <p>
                 <img src="../../imagenes/img/pizzas/lovers/piizaHawayaLov.jpeg" alt="imgcontenido">
                 <h4>¿Te gusta la Hawaiana? La hicimos especial, la hicimos Lovers. ¡Pruébala!</h4>
+                
             </div>
             <div>
+                
                 <img src="../../imagenes/img/pizzas/lovers/pizzaJamonLov.jpeg" alt="imgcontenido">
                 <h4>¿Amante del Jamón y Lovers? ¡Anímate! Escoge tu masa y deleita tu Lovers de Jamón.</h4>
             </div>
@@ -145,6 +160,17 @@
             <p>Copyright &copy; 2019 Todos los derechos reservados</p>
         </div>
     </footer>
+    <script>
+        $('#Estrellas').starrr({
+            rating:3,
+            change:function(e,valor){
+                alert(valor);
+                
+            }
+            
+        });
+         
+         </script>
 </body>
 
 </html>

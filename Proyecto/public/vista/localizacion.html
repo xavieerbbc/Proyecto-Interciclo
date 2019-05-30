@@ -20,15 +20,12 @@
 
 <body>
     <header>
-        <div id="banner">
-            <p> Sucursales en Cuenca </p>
+        <div >
+            <p class="p"> Sucursales en Cuenca </p>
         </div>
-        <div id="gradient"></div>
 
     </header>
-    <br>
-    <a href="agregarS.php">Agregar una nueva Sucursal</a>
-
+    
     <div id="listado">
             <div class="encabezado">
                     <nav class="menu">
@@ -49,18 +46,27 @@
                     </nav>
                 </div>
     </div>
-
+    
     <style type="text/css">
         .sp-page-builder .page-content #section-id-1510066293570 {
             margin: 0px 0px 0px 0px;
             padding: 20px 0px 20px 0px;
+        }
+        body{
+            background: rgb(3, 54, 54);
+        }
+        h2{
+            color: brown;
+        }
+        img{
+            width: 200px; height: 200px;
         }
 
         .sp-page-builder .page-content #section-id-1510149195307 {
             margin: 0px 0px 0px 0px;
             padding: 0px 0px 0px 0px;
             color: rgba(255, 255, 255, 1);
-            background-color: rgba(40, 40, 40, 1);
+            background-color: rgb(3, 78, 83);
         }
 
         #sppb-addon-1510149195339 {
@@ -95,7 +101,7 @@
             margin: 0px 0px 0px 0px;
             padding: 0px 0px 0px 0px;
             color: rgba(255, 255, 255, 1);
-            background-color: rgba(40, 40, 40, 1);
+            background-color: rgb(85, 48, 48);
         }
 
         #column-id-1510149195324 {
@@ -134,7 +140,7 @@
             margin: 0px 0px 0px 0px;
             padding: 0px 0px 0px 0px;
             color: rgba(255, 255, 255, 1);
-            background-color: rgba(40, 40, 40, 1);
+            background-color: rgb(85, 48, 48);
         }
 
         #sppb-addon-1510155300518 {
@@ -161,7 +167,7 @@
     </style>
 
     <div id="sp-page-builder" class="sp-page-builder  page-69">
-
+        
         <div class="page-content">
             <section id="section-id-1510066293570" class="sppb-section ">
                 <div class="sppb-row-container">
@@ -181,11 +187,13 @@
                     </div>
                 </div>
             </section>
+            
             <div id="section-id-1510149195307" class="sppb-section ">
                 <div class="sppb-container-inner">
                     <div class="sppb-row">
                         <div class="sppb-col-md-7">
                             <div id="column-id-1510149195308" class="sppb-column imagen-izq">
+                                    <img style="float:left;" src="../../imagenes/img/sucursal1.jpg">
                                 <div class="sppb-column-addons">
                                     <div id="sppb-addon-1510149195339" class="clearfix">
                                         <div class="sppb-empty-space imagenes-recuadro clearfix"></div>
@@ -194,6 +202,7 @@
                             </div>
                         </div>
                         <div class="sppb-col-md-5">
+                            
                             <div id="column-id-1510149195309" class="sppb-column ">
                                 <div class="sppb-column-addons">
                                     <div id="sppb-addon-1510149195315" class="clearfix">
@@ -213,7 +222,7 @@
                                         <div class="sppb-text-center"><a href="../controladores/sucursalMatriz.php"
                                                 id="btn-1510149195318"
                                                 class="sppb-btn  sppb-btn-default sppb-btn-rounded"><i
-                                                    class="fa fa-plus-square"></i>Mas Información</a><br><br></div>
+                                                    class="fa fa-plus-square"></i>Como llegar...</a><br><br></div>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +271,7 @@
                                         <div class="sppb-text-center"><a href="../controladores/sucursal1.php"
                                                 id="btn-1510149195328"
                                                 class="sppb-btn  sppb-btn-default sppb-btn-rounded"><i
-                                                    class="fa fa-plus-square"></i>Mas Información</a><br><br></div>
+                                                    class="fa fa-plus-square"></i>Como llegar...</a><br><br></div>
                                     </div>
                                 </div>
                             </div>
@@ -328,7 +337,7 @@
                                         <div class="sppb-text-center"><a href="../controladores/sucursal2.php"
                                                 id="btn-1510155300521"
                                                 class="sppb-btn  sppb-btn-default sppb-btn-rounded"><i
-                                                    class="fa fa-plus-square"></i>Mas Información</a><br><br><br></div>
+                                                    class="fa fa-plus-square"></i>Como llegar...</a><br><br><br></div>
                                     </div>
                                 </div>
                             </div>
@@ -341,12 +350,10 @@
 </body>
 
 <footer>
-    <div id="pie">
-
-        <p>Desarrollado por: Bryam Barrera, Wilmer Durazno, Javier Yunga, Mateo Cordova, Daniel Peralta</p>
-        <p>Copyright &copy; 2019 Todos los derechos reservados</p>
-
-    </div>
+        <div class="derechos">
+                <p>Desarrollado por: Bryam Barrera, Wilmer Durazno, Javier Yunga, Mateo Cordova, Daniel Peralta</p>
+                <p>Copyright &copy; 2019 Todos los derechos reservados</p>
+            </div>
 </footer>
 
 

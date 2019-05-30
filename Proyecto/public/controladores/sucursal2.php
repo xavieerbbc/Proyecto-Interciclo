@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Sucursal 2</title>
     <meta name="google-site-verification" content="Tt2oSyF04JgsvnJIruF9N3-u9nRhPbSB2MjgM6PSvBY" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/listados.css">
+    <link type="text/css" href="../../css/estilos.css" rel="stylesheet">
+    <link type="text/css" href="../../css/cssMenu.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
@@ -19,7 +19,7 @@
             <img src="img/logo4.png">
         </div>
         <div id="gradient"></div>
-        <table>
+        <div class="encabezado">
             <nav class="menu">
                 <ul>
                     <li><a href="../vista/Index.html">HOME</a></li>
@@ -27,12 +27,16 @@
                     <li><a href="">PEDIDOS</a></li>
                     <li><a href="../vista/Combos.html">COMBOS</a></li>
                     <li><a href="../vista/localizacion.html">SUCURSALES</a></li>
-                    <li><a href="../../public/vista/NOSOTROS.html">ACERCA DE</a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="">ACERCA DE</a>
+                        <ul>
+                            <li><a href="../vista/NOSOTROS.html">QUIENES SOMOS</a></li>
+                            <li><a href="../vista/Mision.html">MISION</a></li>
+                            <li><a href="../vista/Vision.html">VISION</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-
-        </table>
+        </div>
     </header>
     <style type="text/css">
       * { text-align: center; }
@@ -43,7 +47,7 @@
 
     <div id="plantilla">
         <h1>Pizzeria Jose Ortega</h1>
-        <img class="img1" src="../img/matriz.jfif">
+        <img class="img1" src="../../imagenes/img/sucursal2.jfif">
         <div id="texto">
             <h1>DIRECCI&Oacute;N</h1>
             <p>Avenida Felipe II, Jose Ortega y Gasset</p>

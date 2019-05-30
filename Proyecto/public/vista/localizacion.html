@@ -6,10 +6,12 @@
     <title>Sucursal</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/listados.css">
-    <link rel="stylesheet" type="text/css" href="css_sucursales/sppagebuilder.css">
-    <link rel="stylesheet" type="text/css" href="css_sucursales/preset1.css">
-    <link rel="stylesheet" type="text/css" href="css_sucursales/custom.css">
-    <link rel="stylesheet" type="text/css" href="css_sucursales/pagebuilder.css">
+    <link rel="stylesheet" type="text/css" href="../controladores/css_sucursales/css_pagebuilder.css">
+    <link rel="stylesheet" type="text/css" href="../controladores/css_sucursales/css_preset1.css">
+    <link rel="stylesheet" type="text/css" href="../controladores/css_sucursales/css_sppagebuilder.css">
+    <link rel="stylesheet" type="text/css" href="../controladores/css_sucursales/custom.css">
+    <link type="text/css" href="../../css/estilos.css" rel="stylesheet">
+    <link type="text/css" href="../../css/cssMenu.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
@@ -19,7 +21,7 @@
 <body>
     <header>
         <div id="banner">
-            <img src="img/logo4.png">
+            <p> Sucursales en Cuenca </p>
         </div>
         <div id="gradient"></div>
 
@@ -28,26 +30,24 @@
     <a href="agregarS.php">Agregar una nueva Sucursal</a>
 
     <div id="listado">
-        <table>
-            <nav class="menu">
-                <ul>
-                    <li><a href="../vista/Index.html">HOME</a></li>
-                    <li><a href="../vista/Menu.html">MENU</a></li>
-                    <li><a href="">PEDIDOS</a></li>
-                    <li><a href="../vista/Combos.html">COMBOS</a></li>
-                    <li><a href="../vista/localizacion.html">SUCURSALES</a></li>
-                    <li><a href="">ACERCA DE</a>
+            <div class="encabezado">
+                    <nav class="menu">
                         <ul>
-                            <li><a href="../vista/NOSOTROS.html">QUIENES SOMOS</a></li>
-                            <li><a href="../vista/Mision.html">MISION</a></li>
-                            <li><a href="../vista/Vision.html">VISION</a></li>
+                            <li><a href="../vista/Index.html">HOME</a></li>
+                            <li><a href="../vista/Menu.html">MENU</a></li>
+                            <li><a href="">PEDIDOS</a></li>
+                            <li><a href="../vista/Combos.html">COMBOS</a></li>
+                            <li><a href="../vista/localizacion.html">SUCURSALES</a></li>
+                            <li><a href="">ACERCA DE</a>
+                                <ul>
+                                    <li><a href="../vista/NOSOTROS.html">QUIENES SOMOS</a></li>
+                                    <li><a href="../vista/Mision.html">MISION</a></li>
+                                    <li><a href="../vista/Vision.html">VISION</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                    <li><a href=""></a></li>
-                </ul>
-            </nav>
-
-        </table>
+                    </nav>
+                </div>
     </div>
 
     <style type="text/css">
@@ -147,7 +147,7 @@
         }
 
         #sppb-addon-1510149195349 {
-            background-image: url(img/back1.jpg);
+            background-image: url(../imagenes/img/sucursal1.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: inherit;

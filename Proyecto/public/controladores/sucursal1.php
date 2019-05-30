@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pizzeria Las Americas</title>
+    <title>Sucursal 1</title>
     <meta name="google-site-verification" content="Tt2oSyF04JgsvnJIruF9N3-u9nRhPbSB2MjgM6PSvBY" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/listados.css">
@@ -42,21 +42,21 @@
    </style>
 
     <div id="plantilla">
-        <h1>Market Online Las Americas</h1>
-        <img class="img1" src="img/back3.jpg">
+        <h1>Pizzeria Federico Proaño </h1>
+        <img class="img1" src="../img/matriz.jfif">
         <div id="texto">
             <h1>DIRECCI&Oacute;N</h1>
-            <p>Av. de las Américas s/n y Camino del Tejar</p>
+            <p>Federico Proaño S/N</p>
             <h1>TEL&Eacute;FONOS</h1>
-            <p>Tel.:(593) 4 2590-630</p>
+            <p>1700-007-008 o (2)3993201</p>
             <h1>Ubicación</h1>
         </div>
         </p>
     </div>
     <div id="mapa" class="margen-izquierdo margen-derecho margen-inferior relleno-superior">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.7457130808098!2d-79.02524875125793!3d-2.8895000978850263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd22a96fa6cea5%3A0x9338e5ef393f938b!2sAve+de+las+Am%C3%A9ricas+%26+Av.+del+Tejar%2C+Cuenca!5e0!3m2!1ses-419!2sec!4v1559015216571!5m2!1ses-419!2sec" 
-        width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
-    </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.68621218961!2d-79.01136978529591!3d-2.9064009978830887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd1872663c6b21%3A0x47f03bd5be05bac!2sFederico+Proa%C3%B1o%2C+Cuenca!5e0!3m2!1ses!2sec!4v1559179379377!5m2!1ses!2sec"
+        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
 
 </body>
 

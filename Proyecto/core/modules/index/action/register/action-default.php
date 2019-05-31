@@ -24,7 +24,6 @@ $client->add();
 						  $patterns[6] = '/%0a/';
 						  $patterns[7] = '/%0d/';
 						 }
-						 //NOTE: can use str_ireplace as this is case insensitive but only available on PHP version 5.0.
 						 return preg_replace($patterns, "", strtolower($value));
 						}
 

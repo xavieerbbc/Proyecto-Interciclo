@@ -1,10 +1,4 @@
 <?php
-
-
-// 13 de Octubre del 2014
-// Session.php
-// @brief esto es algo mucho mas magico
-
 class Session {
 	function __get($value){
 		if(!$this->exist($value)){

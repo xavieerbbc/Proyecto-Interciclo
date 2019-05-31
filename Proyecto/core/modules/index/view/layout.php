@@ -62,8 +62,8 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="./"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="./"><i class=""></i> Menu</a></li>
+      <li><a href="./"><i class=""></i> Home</a></li>
+      <li><a href="./"><i class="fa fa-home"></i> Menu</a></li>
       <li><a href="./"><i class=""></i> Pedido</a></li>
       <li><a href="./"><i class=""></i> Combos</a></li>
       <li><a href="./"><i class=""></i> Sucursales</a></li>

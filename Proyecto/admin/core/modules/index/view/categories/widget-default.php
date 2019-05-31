@@ -134,3 +134,20 @@ $categories = CategoryData::getAll();
             </div>
 
           </div>
+
+          <style type="text/css">
+  th {
+    background: rgb(241, 97, 128);
+    opacity: 0.6;
+  }
+
+  tr {
+    background: rgb(197, 196, 201);
+
+  }
+
+  body {
+    background: rgba(204, 226, 240, 0.856);
+
+  }
+</style>

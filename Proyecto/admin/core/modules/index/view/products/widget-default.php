@@ -51,3 +51,21 @@ $categories = ProductData::getAll();
             </div>
 
           </div>
+
+<style type="text/css">
+th{
+  background: rgb(20, 158, 182);
+  opacity: 0.6;
+}
+tr{
+  background: rgb(193, 197, 195) ;
+  
+}
+body{
+  background-image: url(../imagenes/img/fondo-product.jpg);
+  
+}
+
+
+
+</style>

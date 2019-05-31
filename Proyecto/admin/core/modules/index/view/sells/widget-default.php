@@ -53,3 +53,21 @@ $buys =  BuyData::getAll();
             </div>
 
           </div>
+<style type="text/css">
+        
+th{
+  background: rgb(20, 182, 88);
+  opacity: 0.6;
+}
+tr{
+  background: rgb(193, 197, 195) ;
+  
+}
+body{
+  background:rgb(223, 250, 240);
+  
+}
+
+
+
+</style>

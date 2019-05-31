@@ -4,7 +4,7 @@
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
 			<div class="panel panel-default">
-				<div class="panel-heading">REGISTRO DE CLIENTES</div>
+				<div class="panel-heading">Iniciar Sesion</div>
 				<div class="panel-body">
 <form class="form-horizontal" role="form" method="post" action="index.php?action=clientaccess">
 

@@ -35,6 +35,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
+        
 <?php 
 $u=null;
 if(isset($_SESSION["admin_id"]) && $_SESSION["admin_id"]!=""):

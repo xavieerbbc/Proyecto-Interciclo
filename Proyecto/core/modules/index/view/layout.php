@@ -144,7 +144,7 @@ $client = ClientData::getById($_SESSION["client_id"]);
         <div class="contenidoPie">
 
             <div class="infoPie">
-                <img src="../../../../imagenes/iconos/pizzaHome.png" alt="imgPie">
+                <img src="imagenes/iconos/pizzaHome.png" alt="imgPie">
                 <div class="detalleInfoPie">
                     <p class="tituloDetalleInfoPie">Matriz Cuenca</p>
                     <p class="textoDetalleInfoPie">1700-007-007 o (2)3993200</p>
@@ -155,7 +155,7 @@ $client = ClientData::getById($_SESSION["client_id"]);
                 </div>
             </div>
             <div class="infoPie">
-                <img src="../../../../imagenes/iconos/cobertura.png" alt="imgPie">
+                <img src="imagenes/iconos/cobertura.png" alt="imgPie">
 
                 <div class="detalleInfoPie">
                     <p class="tituloDetalleInfoPie">MATRIZ</p>

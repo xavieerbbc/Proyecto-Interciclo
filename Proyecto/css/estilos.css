@@ -256,6 +256,7 @@ body {
 
 }
 .p{
-    color:blue;
-    background: rgb(167, 53, 0);
+    color:rgb(16, 16, 17);
+    background: rgb(228, 125, 78);
+    padding: 20px;
 }

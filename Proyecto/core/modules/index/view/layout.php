@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,57 +14,58 @@
   <link type="text/css" href="res/cssMenu.css" rel="stylesheet">
 
 </head>
-<body >
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-xs-5">
-      <br><h1>Pizza Home</h1>
-      </div>
-      <div class="col-md-7 col-xs-5">
-<br><br>
-<form class="form-horizontal" role="form">
-<div class="input-group">
-<input type="hidden" name="view" value="productos">
-<input type="hidden" name="act" value="search">
-      <input type="text" name="q" placeholder="Buscar productos ..." class="form-control">
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button">&nbsp;<i class="fa fa-search"></i>&nbsp;</button>
-      </span>
-    </div><!-- /input-group -->
-</form>
-<br><br>
-      </div>
-      <div class="col-md-2 col-xs-2">
-        <!-- cart button -->
-<br><br>
-<a href="index.php?view=mycart" class="btn btn-block btn-default"><i class="fa fa-shopping-cart"></i> 
-<?php if(isset($_SESSION["cart"])):?>
-<span class="badge"><?php echo count($_SESSION["cart"]); ?></span>
-<?php endif; ?>
-      </a>
-      </div>
 
+<body>
+  <section class="fondopizza">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-xs-5">
+          <br>
+          <h1 class="titulo"><img src="imagenes/iconos/pizzaHome.png" alt="imgfondopizza"> Pizza Home</h1>
+        </div>
+        <div class="col-md-7 col-xs-5">
+          <br><br>
+          <form class="form-horizontal" role="form">
+            <div class="input-group">
+              <input type="hidden" name="view" value="productos">
+              <input type="hidden" name="act" value="search">
+              <input type="text" name="q" placeholder="Buscar productos ..." class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">&nbsp;<i class="fa fa-search"></i>&nbsp;</button>
+              </span>
+            </div><!-- /input-group -->
+          </form>
+          <br><br>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <!-- cart button -->
+          <br><br>
+          <a href="index.php?view=mycart" class="btn btn-block btn-default"><i class="fa fa-shopping-cart"></i>
+            <?php if(isset($_SESSION["cart"])):?>
+            <span class="badge"><?php echo count($_SESSION["cart"]); ?></span>
+            <?php endif; ?>
+          </a>
+        </div>
+
+      </div>
     </div>
-  </div>
-</section>
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-<div class="container">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-  </div>
-
+  </section>
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="./"><i class=""></i> Home</a></li>
-      <li><a href="./"><i class="fa fa-home"></i> Menu</a></li>
+      <li><a href="./"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="./"><i class=""></i> Menu</a></li>
       <li><a href="./"><i class=""></i> Pedido</a></li>
       <li><a href="./"><i class=""></i> Combos</a></li>
       <li><a href="./"><i class=""></i> Sucursales</a></li>
@@ -71,110 +73,115 @@
 <?php
 $cats = CategoryData::getPublics();
 ?>
-<?php if(count($cats)>0):?>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th-list"></i> Productos<b class="caret"></b></a>
-        <ul class="dropdown-menu">
-<?php foreach($cats as $cat):?>
-          <li><a href="index.php?view=productos&cat=<?php echo $cat->short_name; ?>"><?php echo $cat->name; ?></a></li>
-<?php endforeach; ?>
+          <?php if(count($cats)>0):?>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th-list"></i> Productos<b
+                class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <?php foreach($cats as $cat):?>
+              <li><a href="index.php?view=productos&cat=<?php echo $cat->short_name; ?>"><?php echo $cat->name; ?></a>
+              </li>
+              <?php endforeach; ?>
+            </ul>
+          </li>
+          <?php endif; ?>
+          <!--      <li><a href="index.php?view=contacto"><i class="fa fa-envelope"></i> Contactanos</a></li> -->
         </ul>
-      </li>
-<?php endif; ?>
-<!--      <li><a href="index.php?view=contacto"><i class="fa fa-envelope"></i> Contactanos</a></li> -->
-    </ul>
 
-    <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
 
-<?php if(!isset($_SESSION["client_id"])):?>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>&nbsp; <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.php?view=clientaccess">Iniciar Sesion</a></li>
-          <li><a href="admin/index.php?view=login">Iniciar Administrador</a></li>
-          <li><a href="index.php?view=register">Registrarse</a></li>
+          <?php if(!isset($_SESSION["client_id"])):?>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>&nbsp; <b
+                class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="admin/index.php?view=login">Administrador</a></li>
+              <li><a href="index.php?view=clientaccess">Iniciar Sesion</a></li>
+              <li><a href="index.php?view=register">Registrarse</a></li>
+            </ul>
+          </li>
         </ul>
-      </li>
-    </ul>
-<?php else:
+        <?php else:
 $client = ClientData::getById($_SESSION["client_id"]);
 ?>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp; <?php echo $client->name." ".$client->lastname;?><b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.php?view=client">Inicio</a></li>
-          <li><a href="logout.php">Salir</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp;
+            <?php echo $client->name." ".$client->lastname;?><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="index.php?view=client">Inicio</a></li>
+            <li><a href="logout.php">Salir</a></li>
+          </ul>
+        </li>
         </ul>
-      </li>
-    </ul>
-<?php endif; ?>
-  </div><!-- /.navbar-collapse -->
-</div>
-</nav>
-<?php View::load("index"); ?>
-<br><br><br>
-<section>
-<div class="container">
+        <?php endif; ?>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  <?php View::load("index"); ?>
+  <br><br><br>
+  <section>
+    <div class="container">
 
-<!-- - - - -->
-<div class="row">
-<div class="col-md-12">
-<hr>
-<!-- 
+      <!-- - - - -->
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+          <!-- 
 <p><b>Integrantes: Bryam Barrera,Mateo Cordova,Wilmer Durazno,Daniel Peralta,Javier Yunga </b> &copy; 2019</p>
 <ul class="list-inline">
 <li><p class="text-muted">An <a href="http://evilnapsis.com/">UPS</a> Production</p></li>
 <li><a href="http://evilnapsis.com/services/support/">Soporte</a></li> 
 -->
-</ul>
-</div>
-</div>
-</div>
-</section>
-<br>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
   <script src="res/lib/bootstrap/js/bootstrap.min.js"></script>
   <script>
-  $(".tip").tooltip();
+    $(".tip").tooltip();
   </script>
 </body>
 <footer>
-        <div class="pieNombre">
-            <h3>Pizza Home Cuenca</h3>
-        </div>
-        <div class="contenidoPie">
+  <div class="pieNombre">
+    <h3>Pizza Home Cuenca</h3>
+  </div>
+  <div class="contenidoPie">
 
-            <div class="infoPie">
-                <img src="imagenes/iconos/pizzaHome.png" alt="imgPie">
-                <div class="detalleInfoPie">
-                    <p class="tituloDetalleInfoPie">Matriz Cuenca</p>
-                    <p class="textoDetalleInfoPie">1700-007-007 o (2)3993200</p>
-                    <p class="tituloDetalleInfoPie">SUCURSAL 1</p>
-                    <p class="textoDetalleInfoPie">1700-007-008 o (2)3993201</p>
-                    <p class="tituloDetalleInfoPie">SUCURSAL 2</p>
-                    <p class="textoDetalleInfoPie">1700-007-009 o (2)3993202</p>
-                </div>
-            </div>
-            <div class="infoPie">
-                <img src="imagenes/iconos/cobertura.png" alt="imgPie">
+    <div class="infoPie">
+      <img src="imagenes/iconos/pizzaHome.png" alt="imgPie">
+      <div class="detalleInfoPie">
+        <p class="tituloDetalleInfoPie">Matriz Cuenca</p>
+        <p class="textoDetalleInfoPie">1700-007-007 o (2)3993200</p>
+        <p class="tituloDetalleInfoPie">SUCURSAL 1</p>
+        <p class="textoDetalleInfoPie">1700-007-008 o (2)3993201</p>
+        <p class="tituloDetalleInfoPie">SUCURSAL 2</p>
+        <p class="textoDetalleInfoPie">1700-007-009 o (2)3993202</p>
+      </div>
+    </div>
+    <div class="infoPie">
+      <img src="imagenes/iconos/cobertura.png" alt="imgPie">
 
-                <div class="detalleInfoPie">
-                    <p class="tituloDetalleInfoPie">MATRIZ</p>
-                    <p class="textoDetalleInfoPie">Av. Gonzalez Suarez, Calle Gral. José de San Martin</p>
-                </div>
-                <div class="detalleInfoPie">
-                    <p class="tituloDetalleInfoPie">SUCURSAL 1</p>
-                    <p class="textoDetalleInfoPie">Federico Proaño S/N</p>
-                </div>
-                <div class="detalleInfoPie">
-                    <p class="tituloDetalleInfoPie">SUCURSAL 2</p>
-                    <p class="textoDetalleInfoPie">Avenida Felipe II, Jose Ortega y Gasset</p>
-                </div>
+      <div class="detalleInfoPie">
+        <p class="tituloDetalleInfoPie">MATRIZ</p>
+        <p class="textoDetalleInfoPie">Av. Gonzalez Suarez, Calle Gral. José de San Martin</p>
+      </div>
+      <div class="detalleInfoPie">
+        <p class="tituloDetalleInfoPie">SUCURSAL 1</p>
+        <p class="textoDetalleInfoPie">Federico Proaño S/N</p>
+      </div>
+      <div class="detalleInfoPie">
+        <p class="tituloDetalleInfoPie">SUCURSAL 2</p>
+        <p class="textoDetalleInfoPie">Avenida Felipe II, Jose Ortega y Gasset</p>
+      </div>
 
-            </div>
-        </div>
-        <div class="derechos">
-            <p>Desarrollado por: Bryam Barrera, Wilmer Durazno, Javier Yunga, Mateo Cordova, Daniel Peralta</p>
-            <p>Copyright &copy; 2019 Todos los derechos reservados</p>
-        </div>
-    </footer>
+    </div>
+  </div>
+  <div class="derechos">
+    <p>Desarrollado por: Bryam Barrera, Wilmer Durazno, Javier Yunga, Mateo Cordova, Daniel Peralta</p>
+    <p>Copyright &copy; 2019 Todos los derechos reservados</p>
+  </div>
+</footer>
+
 </html>

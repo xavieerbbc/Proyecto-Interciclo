@@ -129,11 +129,25 @@
 /* ESTILOS PARA EL BODY DE HOME.HTML */
 
 body {
-    
     background-image: url(../imagenes/img/ingredientes-pizza-costuras_1176-269.jpg);
-
 }
 
+.fondopizza {
+    background-image: url(../imagenes/img/fondo.jpg); 
+}
+
+.fondopizza img {
+    position:absolute; top:20px;
+    position:absolute; bottom:20px;
+    position:absolute; left:-150px;
+    position:absolute; right:20px;
+    width: 150px; height: 90px;
+}
+
+.titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white; 
+}
 .categorias{
     width: 20%;
     float: left;

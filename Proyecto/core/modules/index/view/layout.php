@@ -51,9 +51,9 @@
     </div>
   </section>
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
+    <div class="container fondo1">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
+      <div class="navbar-header ">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -62,14 +62,15 @@
         </button>
       </div>
   <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">
-      <li><a href="./"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="./"><i class=""></i> Menu</a></li>
-      <li><a href="./"><i class=""></i> Pedido</a></li>
-      <li><a href="./"><i class=""></i> Combos</a></li>
-      <li><a href="./"><i class=""></i> Sucursales</a></li>
-      <li><a href="./"><i class=""></i> Acerca De.</a></li>
+  <div class="collapse navbar-collapse navbar-ex1-collapse" class="encabezado1">
+    <nav class="menu1">
+    <ul class="nav navbar-nav" class="menu1">
+      <li><a href="./"><i class="fa fa-home" id="menustyle"></i> Home</a></li>
+      <li><a href=""><i id="menustyle"></i> Menu</a></li>
+      <li><a href="index.php?view=client"><i id="menustyle"></i> Pedido</a></li>
+      <li><a href=""><i id="menustyle"></i> Combos</a></li>
+      <li><a href=""><i id="menustyle"></i> Sucursales</a></li>
+      <li><a href=""><i id="menustyle"></i> Acerca De.</a></li>
 <?php
 $cats = CategoryData::getPublics();
 ?>
@@ -87,6 +88,7 @@ $cats = CategoryData::getPublics();
           <?php endif; ?>
           <!--      <li><a href="index.php?view=contacto"><i class="fa fa-envelope"></i> Contactanos</a></li> -->
         </ul>
+</nav>
 
         <ul class="nav navbar-nav navbar-right">
 
@@ -108,7 +110,7 @@ $client = ClientData::getById($_SESSION["client_id"]);
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp;
             <?php echo $client->name." ".$client->lastname;?><b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="index.php?view=client">Inicio</a></li>
+            <li><a href="./">Inicio</a></li>
             <li><a href="logout.php">Salir</a></li>
           </ul>
         </li>

@@ -6,7 +6,7 @@ $news = ProductData::getFeatureds();
 <section>
   <div class="container">
 
-  <div class="row">
+  <div class="row fondo">
 
   <div class="col-md-12">
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -126,3 +126,9 @@ if(isset($_SESSION["cart"])){
 
   </div>
   </section>
+  
+  <style type="text/css">
+	.fondo {
+		background-color: white;
+	}
+</style>

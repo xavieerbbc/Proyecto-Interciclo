@@ -2,7 +2,7 @@
 $client = ClientData::getById($_SESSION["client_id"]);
 ?>
 <div class="container">
-<div class="row">
+<div class="row fondo">
 
 <div class="col-md-12">
 <h3>Bienvenido, <?php echo $client->name." ".$client->lastname; ?></h3>
@@ -17,7 +17,7 @@ $buys = BuyData::getAllByClientid($_SESSION["client_id"]);
 
 ?>
 <div class="container">
-<div class="row">
+<div class="row fondo">
 	<div class="col-md-12">
 	<h2>Mis Compras</h2>
 <?php if(count($buys)>0):?>
@@ -53,3 +53,8 @@ $buys = BuyData::getAllByClientid($_SESSION["client_id"]);
 
 
 <?php endif; ?>
+<style type="text/css">
+	.fondo {
+		background-color: white;
+	}
+</style>

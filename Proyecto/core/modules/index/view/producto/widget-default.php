@@ -6,7 +6,7 @@ Viewer::addView($p->id,"product_id","product_view");
 <section>
   <div class="container">
 
-  <div class="row">
+  <div class="row fondo">
   <div class="col-md-3">
           <div class="panel panel-primary">
         <div class="panel-heading">Categorias</div>
@@ -84,3 +84,9 @@ if(isset($_SESSION["cart"])){
 
   </div>
   </section>
+
+  <style type="text/css">
+	.fondo {
+		background-color: white;
+	}
+</style>

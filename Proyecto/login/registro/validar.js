@@ -12,7 +12,7 @@ function validar(){
         alert("Cedula Incorrecta")
     }
     if(banderaE == false){
-        alert("El correo debe tener mas de tres caracteres antes del @ y tener el  dominio  pizzaadmi.com para el administrador")
+        alert("El correo debe tener mas de tres caracteres antes del @ ")
     }
     if(banderaF == false){
         alert("Fecha Incorretca su fecha debe estar con el formato dd/mm/yyyy o su fecha no es valida")

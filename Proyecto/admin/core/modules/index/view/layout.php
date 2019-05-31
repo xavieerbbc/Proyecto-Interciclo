@@ -30,7 +30,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.php">PIZZA HOME <sup><small><span class="label label-primary">v1.0</span></small></sup> </a>
+          <a class="navbar-brand" href="../index.php">PIZZA HOME <sup><small><span class="label label-primary"></span></small></sup> </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -41,7 +41,7 @@ if(isset($_SESSION["admin_id"]) && $_SESSION["admin_id"]!=""):
   $u = UserData::getById($_SESSION["admin_id"]);
 ?>
          <ul class="nav navbar-nav">
-          <li><a href="../"><i class="fa fa-globe"></i> Ver tienda</a></li>
+          <li><a href="../"><i ></i> HOME</a></li>
           </ul> 
           <ul class="nav navbar-nav side-nav">
           <li><a href="./"><i class="fa fa-home"></i> Inicio</a></li>
@@ -49,9 +49,9 @@ if(isset($_SESSION["admin_id"]) && $_SESSION["admin_id"]!=""):
           <li><a href="index.php?view=sells"><i class="fa fa-shopping-cart"></i> Ventas</a></li>
           <li><a href="index.php?view=clients"><i class="fa fa-male"></i> Clientes</a></li>
           <li><a href="index.php?view=categories"><i class="fa fa-th-list"></i> Categorias</a></li>
-          <li><a href="index.php?view=slider"><i class="fa fa-th-large"></i> Slider</a></li>
+          <li><a href="index.php?view=slider"><i class="fa fa-th-large"></i> Diseño del Home</a></li>
           <?php if($u->is_admin):?>
-          <li><a href="index.php?view=users"><i class="fa fa-users"></i> Usuarios </a></li>
+          <li><a href="index.php?view=users"><i class="fa fa-users"></i> Administradores </a></li>
         <?php endif;?>
           </ul>
 

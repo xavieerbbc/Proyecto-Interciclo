@@ -15,9 +15,10 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.menu1 > ul > li > a{
-    border: 0.5px solid black; 
-    width: 150px; height: 50px;
+  li{
+    border: 0.5px solid black;
+    margin-left: 2px; 
+    width: 135px; height: 50px;
     text-align: center;
 }
 .topHeaderLogo img{

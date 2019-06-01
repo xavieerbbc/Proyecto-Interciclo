@@ -121,7 +121,7 @@ $categories = CategoryData::getAll();
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-6">
-      <button type="submit" class="btn btn-success btn-block">Editar Producto</button>
+      <button type="submit" class="btn btn-success btn-block">Aplicar Cambios</button>
     </div>
     <div class="col-lg-4">
       <button type="reset" class="btn btn-default btn-block">Limpiar Campos</button>

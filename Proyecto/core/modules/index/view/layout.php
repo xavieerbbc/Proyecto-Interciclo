@@ -82,17 +82,17 @@ $cats = CategoryData::getPublics();
                 class="caret"></b></a>
             <ul class="dropdown-menu">
               <?php foreach($cats as $cat):?>
-              <li><a href="index.php?view=productos&cat=<?php echo $cat->short_name; ?>"><?php echo $cat->name; ?></a>
+              <li><a href="index.php?view=productos&cat=<?php echo $cat->short_name; ?>"><?php echo $cat->name; ?></a> 
               </li>
               <?php endforeach; ?>
             </ul>
           </li>
           <?php endif; ?>
-          <!--      <li><a href="index.php?view=contacto"><i class="fa fa-envelope"></i> Contactanos</a></li> -->
+                <li><a href="index.php?view=contacto"><i class="fa fa-envelope"></i> Contactanos</a></li> 
         </ul>
 </nav>
 
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right menu1">
 
           <?php if(!isset($_SESSION["client_id"])):?>
           <li class="dropdown">

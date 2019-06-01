@@ -1,5 +1,5 @@
 <div class="container">
-<div class="row">
+<div class="row fondo">
 <div class="col-md-8 col-md-offset-2">
 <h2>Envianos un mensaje</h2>
 <form role="form" method="post" action="./?action=contact">
@@ -26,3 +26,8 @@
 </div>
 </div>
 </div>
+<style type="text/css">
+	.fondo {
+		background-color: white;
+	}
+</style>

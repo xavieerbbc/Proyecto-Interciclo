@@ -65,11 +65,13 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse" class="encabezado1">
     <nav class="menu1">
     <ul class="nav navbar-nav" class="menu1">
-      <li><a href="./"><i class="fa fa-home" id="menustyle"></i> Home</a></li>
-      <li><a href=""><i id="menustyle"></i> Menu</a></li>
+
+      <li><a href=""><i  id="menustyle"></i> Home</a></li>
+      <li><a href="./"><i id="fa fa-home" id="menustyle"></i> Menu</a></li>
       <li><a href="index.php?view=client"><i id="menustyle"></i> Pedido</a></li>
       <li><a href=""><i id="menustyle"></i> Combos</a></li>
       <li><a href=""><i id="menustyle"></i> Sucursales</a></li>
+
       <li><a href=""><i id="menustyle"></i> Acerca De.</a></li>
 <?php
 $cats = CategoryData::getPublics();

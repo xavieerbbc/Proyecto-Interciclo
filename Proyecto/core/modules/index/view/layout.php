@@ -25,7 +25,7 @@
         </div>
         <div class="col-md-7 col-xs-5">
           <br><br>
-          
+          <!---
 <form class="form-horizontal" role="form">
 <div class="input-group">
 <input type="hidden" name="view" value="productos">
@@ -36,10 +36,11 @@
       </span>
     </div>
 </form>
-
+-->
           <br><br>
         </div>
         <div class="col-md-2 col-xs-2">
+          <!-- cart button -->
           <br><br>
 
         </div>
@@ -49,6 +50,10 @@
     </section>
 
 
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <!--  <a class="navbar-brand" href="./">Navbar</a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -56,12 +61,14 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto" class="menu1">
             <li class="nav-item active"><a class="nav-link" href="./"><i class="fa fa-home"></i> Inicio</a></li>
-            <li><a href="index.php?view=index2"><i id="fa fa-home" id="menustyle"></i> Menu</a></li>
+            <li><a href="./"><i id="fa fa-home" id="menustyle"></i> Menu</a></li>
             <li><a href="index.php?view=client"><i id="menustyle"></i> Pedido</a></li>
+            <li><a href=""><i id="menustyle"></i> Sucursales</a></li>
 
-      <li><a href="index.php?view=mision"><i id="menustyle"></i> Acerca De.</a></li>
+      <li><a href=""><i id="menustyle"></i> Acerca De.</a></li>
             <?php
 $cats = CategoryData::getPublics();
 ?>
@@ -69,7 +76,7 @@ $cats = CategoryData::getPublics();
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <i class=""></i> Combos
+                <i class="fa fa-th-list"></i> Combos
               </a>
 
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -86,37 +93,16 @@ $cats = CategoryData::getPublics();
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-th-list"></i> Sucursales
+                <i class="fa fa-user"></i> Mi cuenta
               </a>
 
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <?php if(isset($_SESSION["client_id"])):?>
-                <a class="dropdown-item" href="index.php?view=sucursales">Matriz</a> <br>
-                <a class="dropdown-item" href="index.php?view=sucursal1">Sucursal 1</a>  <br>
-                <a class="dropdown-item" href="index.php?view=sucursal2">Sucursal 2</a>
-                <?php else:?>
-                <a class="dropdown-item" href="index.php?view=sucursales">MATRIZ</a> <br>
-                <a class="dropdown-item" href="index.php?view=sucursal1">SUCURSAL 1</a><br>
-                <a class="dropdown-item" href="index.php?view=sucursal2">SUCURSAL 2</a>
-                <?php endif; ?>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown active">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-user"></i> Mi Cuenta
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <?php if(isset($_SESSION["client_id"])):?>
-                <a class="dropdown-item" href="index.php?view=client">Mi cuenta</a> <br>
+                <a class="dropdown-item" href="index.php?view=client">Mi cuenta</a>
                 <a class="dropdown-item" href="logout.php">Salir</a>
                 <?php else:?>
-                <a class="dropdown-item" href="admin/index.php?view=login">Administradorr</a> <br>
-                <a class="dropdown-item" href="index.php?view=clientaccess">Iniciar sesion</a> <br>
+                <a class="dropdown-item" href="index.php?view=clientaccess">Iniciar sesion</a>
                 <a class="dropdown-item" href="index.php?view=register">Registro</a>
-                
                 <?php endif; ?>
               </div>
             </li>
@@ -125,6 +111,10 @@ $cats = CategoryData::getPublics();
           <form class="form-inline my-2 my-lg-0">
             <input type="hidden" name="view" value="productos">
             <input type="hidden" name="act" value="search">
+
+            <input class="form-control mr-sm-2" name="q" type="search" placeholder="Buscar ..." aria-label="Buscar ...">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+            &nbsp;
             <a href="index.php?view=mycart" class="btn  btn-secondary my-2 my-sm-0"><i class="fa fa-shopping-cart"></i>
               <?php if(isset($_SESSION["cart"])):?>
               <span class="badge"><?php echo count($_SESSION["cart"]); ?></span>

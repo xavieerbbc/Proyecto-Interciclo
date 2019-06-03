@@ -74,17 +74,18 @@
 </div>
 <style type="text/css">
 	th {
-		background: rgb(49, 129, 69);
+		background: rgb(49, 129, 69) !important;
 	}
 
 	tr {
-		background: rgb(197, 196, 201);
+		background: rgb(197, 196, 201)!important;
 
 	}
 
 	body {
-		background: rgba(218, 245, 214, 0.856);
+		background: rgba(218, 245, 214, 0.856)!important;
 
 
 	}
+
 </style>

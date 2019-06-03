@@ -18,7 +18,7 @@ $ivatxt = ConfigurationData::getByPreffix("general_iva_txt")->val;
 	<div class="row fondo">
 
 		<div class="col-md-12">
-			<?php if(isset($_SESSION["cart"]) || count($_SESSION["cart"]>0)):?>
+			<?php if(isset($_SESSION["cart"]) && count($_SESSION["cart"]>0)):?>
 		</div>
 		<h2>Mi Carrito</h2>
 <table class="table table-bordered">
@@ -89,7 +89,6 @@ $total += $s["q"]*$p->price;
 <?php endforeach; ?>
 </select>
 <button class="btn btn-primary btn-block boton">Confirmar</button>
-<a href="index.php?action=cleancart" class="btn btn-danger btn-block boton">Limpar</a>
 </form>
 <?php endif; ?>
 

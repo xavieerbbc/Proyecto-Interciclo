@@ -90,7 +90,6 @@ $coupon = CouponData::getById($_SESSION["coupon"]);
 <?php endif; ?>
 <br>
 <a href="index.php?view=mycart" class="btn btn-warning btn-block">Regresar al Carrito</a>
-<br><a href="index.php?action=clearcart" class="btn btn-danger btn-block">Cancelar</a>
 </div>
 </div>
 

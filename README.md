@@ -313,3 +313,15 @@ TAREAS
 
 ![ta1](https://user-images.githubusercontent.com/34029227/58816156-874a1280-85ee-11e9-8466-794a4eb71daf.PNG)
 ![ta2](https://user-images.githubusercontent.com/34029227/58816158-874a1280-85ee-11e9-8c74-d18608b12dec.PNG)
+
+RESULTADOS
+
+![WhatsApp Image 2019-06-03 at 11 51 38 AM](https://user-images.githubusercontent.com/34029227/58819531-0ee74f80-85f6-11e9-8ee8-e6c8e4766ce0.jpeg)
+![WhatsApp Image 2019-06-03 at 11 52 08 AM](https://user-images.githubusercontent.com/34029227/58819588-2fafa500-85f6-11e9-8ddd-34405e21c2b4.jpeg)
+![WhatsApp Image 2019-06-03 at 11 52 30 AM](https://user-images.githubusercontent.com/34029227/58819642-4c4bdd00-85f6-11e9-87cf-2e273728a78e.jpeg)
+![WhatsApp Image 2019-06-03 at 11 55 52 AM](https://user-images.githubusercontent.com/34029227/58819823-a8166600-85f6-11e9-8d31-78bd63c04b38.jpeg)
+![WhatsApp Image 2019-06-03 at 11 56 09 AM](https://user-images.githubusercontent.com/34029227/58819839-b5335500-85f6-11e9-9c43-e527325949b8.jpeg)
+![WhatsApp Image 2019-06-03 at 11 56 22 AM](https://user-images.githubusercontent.com/34029227/58819871-c2504400-85f6-11e9-8676-2814fed29510.jpeg)
+![WhatsApp Image 2019-06-03 at 11 56 22 AM (1)](https://user-images.githubusercontent.com/34029227/58819883-cbd9ac00-85f6-11e9-91c1-3e857d2a26a6.jpeg)
+
+

@@ -8,6 +8,8 @@ class ClientData {
 		$this->name = "";
 		$this->lastname = "";
 		$this->email = "";
+		$this->phone = "";
+		$this->address = "";
 		$this->password = "";
 		$this->created_at = "NOW()";
 	}
@@ -39,6 +41,8 @@ class ClientData {
 	}
 
 	public function getFullname(){ return $this->name." ".$this->lastname; }
+	public function getAddress(){ return $this->address.""; }
+	public function getPhone(){ return $this->phone.""; }
 
 	public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id=$id";

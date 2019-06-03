@@ -68,10 +68,10 @@ $products = BuyProductData::getAllByBuyId($service->id);
         $this->Cell(0,10," NOMBRE:        ".$client->getFullname());
         $this->setY(43);
         $this->setX(20);
-        $this->Cell(0,10," DIRECCION:        ".$client->address);
+        $this->Cell(0,10," DIRECCION:        ".$client->getAddress());
         $this->setY(48);
         $this->setX(20);
-        $this->Cell(0,10,"TEL:      ".$client->phone);
+        $this->Cell(0,10,"TEL:      ".$client->getPhone());
         $this->setY(53);
         $this->setX(20);
 

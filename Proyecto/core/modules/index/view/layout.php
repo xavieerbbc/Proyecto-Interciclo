@@ -64,14 +64,34 @@
         <div class="collapse navbar-collapse m2" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto" class="menu1">
             <li class="nav-item active"><a class="menustyle nav-link" href="./"> Inicio</a></li>
-            <li><a class="menustyle nav-link"href=""> Menu</a></li>
+            <li><a class="menustyle nav-link"href="index.php?view=index2"> Menu</a></li>
             <li><a class="menustyle nav-link" href="index.php?view=client">Pedido</a></li>
-            <li><a class="menustyle nav-link" href="">Sucursales</a></li>
-            <li><a class="menustyle nav-link" href=""> Acerca De.</a></li>
+            
             <?php
 $cats = CategoryData::getPublics();
 ?>
             <?php if(count($cats)>0):?>
+
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user"></i> Sucursales
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <?php if(isset($_SESSION["client_id"])):?>
+                <a class="dropdown-item" href="index.php?view=matriz">Matriz</a>
+                <a class="dropdown-item" href="index.php?view=sucursal1">Sucursal 1</a>
+                <a class="dropdown-item" href="index.php?view=sucursal2">Sucursal 2</a>
+                <?php else:?>
+                <a class="dropdown-item" href="index.php?view=matriz">Matriz</a>
+                <a class="dropdown-item" href="index.php?view=sucursal1">Sucursal 1</a>
+                <a class="dropdown-item" href="index.php?view=sucursal2">Sucursal 2</a>
+                <?php endif; ?>
+              </div>
+            </li>
+
+
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
@@ -106,7 +126,10 @@ $cats = CategoryData::getPublics();
                 <?php endif; ?>
               </div>
             </li>
+            
+            <li><a class="menustyle nav-link" href="index.php?view=mision"> Acerca De.</a></li>
           </ul>
+          
           <form class="form-inline my-2 my-lg-0">
             <input type="hidden" name="view" value="productos">
             <input type="hidden" name="act" value="search">

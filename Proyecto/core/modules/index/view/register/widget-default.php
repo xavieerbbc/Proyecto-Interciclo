@@ -33,11 +33,6 @@
       <input type="address" name="address" class="form-control" id="inputEmail1" placeholder="Direccion">
     </div>
   </div>
-<<<<<<< HEAD
-<input type="hidden" name="phone">
-<input type="hidden" name="address">
-=======
->>>>>>> fd9bc9e44fea404926e8d819fbf95f9375af59ea
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-12 control-label">*Correo Electronico</label>
     <div class="col-lg-12">

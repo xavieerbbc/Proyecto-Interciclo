@@ -4,7 +4,7 @@ class Database {
 	public static $db;
 	public static $con;
 	function Database(){
-		$this->user="root";$this->pass="L00lapal00za";$this->host="localhost";$this->ddbb="mipizzeria";
+		$this->user="root";$this->pass="L00lapal00za";$this->host="localhost";$this->ddbb="mipizzeria2";
 	//	$this->user="minedeck_mduser";$this->pass="l00lapal00za";$this->host="localhost";$this->ddbb="minedeck_md";
 	}
 

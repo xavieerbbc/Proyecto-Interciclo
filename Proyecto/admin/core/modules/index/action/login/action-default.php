@@ -14,7 +14,7 @@
     <label for="exampleInputPassword1">Contrase&ntilde;a</label>
     <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Contrase&ntilde;a">
   </div>
-  <button type="submit" class="btn btn-block btn-default">Iniciar</button>
+  <button type="submit" class="btn btn-block btn-default">Ingresar</button>
 </form>
 
 

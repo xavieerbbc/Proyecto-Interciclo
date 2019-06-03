@@ -1,6 +1,9 @@
 <?php if(isset($_SESSION["client_id"])):
-
 $client = ClientData::getById($_SESSION["client_id"]);
+$iva = ConfigurationData::getByPreffix("general_iva")->val;
+$coin = ConfigurationData::getByPreffix("general_coin")->val;
+$ivatxt = ConfigurationData::getByPreffix("general_iva_txt")->val;
+
 ?>
 
 <?php
@@ -10,19 +13,19 @@ $products = BuyProductData::getAllByBuyId($buy->id);
 
 ?>
 <div class="container">
-<div class="row fondo">
+<div class="row">
 
 <div class="col-md-12">
 <h3>Bienvenido, <?php echo $client->name." ".$client->lastname; ?></h3>
-	<a href="./index.php?view=client" class="btn btn-default"><i class="fa fa-chevron-left"></i> Regresar</a>
-	<a href="./invoice.php?code=<?php echo $buy->code;?>" class="btn btn-default"><i class="fa fa-file-o"></i> Imprimir</a>
-<br></div>
-
+	<a href="./index.php?view=client" class="btn btn-secondary"><i class="fa fa-chevron-left"></i> Regresar</a>
+	<a href="./invoice.php?code=<?php echo $buy->code;?>" class="btn btn-secondary"><i class="fa fa-file"></i> Imprimir</a>
+</div>
 
 </div>
 </div>
+<br>
 <div class="container">
-<div class="row fondo">
+<div class="row">
 	<div class="col-md-12">
 <?php if($buy->status_id==1):?>
 <p class="alert alert-warning">Operacion Pendiente</p>
@@ -51,7 +54,7 @@ $px = $p->getProduct();
 		<td><?php echo $px->getUnit()->name; ?></td>
 		<td><?php echo $px->code; ?></td>
 		<td><?php echo $px->name; ?></td>
-		<td>$ <?php echo number_format($px->price*$p->q,2,".",","); ?></td>
+		<td><?php echo $coin; ?> <?php echo number_format($px->price*$p->q,2,".",","); ?></td>
 	</tr>
 
 	<?php endforeach; ?>
@@ -62,13 +65,13 @@ $px = $p->getProduct();
 <div class="col-md-5 col-md-offset-7">
 	<table class="table table-bordered">
 		<tr>
-			<td>Subtotal</td><td>$ <?php echo number_format($buy->getTotal()-($buy->getTotal()*.16),2,".",","); ?></td>
+			<td>Subtotal</td><td><?php echo $coin; ?> <?php echo number_format($buy->getTotal()-($buy->getTotal()*($iva/100)),2,".",","); ?></td>
 		</tr>
 		<tr>
-			<td>IVA</td><td>$ <?php echo number_format($buy->getTotal()*.16,2,".",","); ?></td>
+			<td><?php echo $ivatxt; ?></td><td><?php echo $coin; ?> <?php echo number_format($buy->getTotal()*($iva/100),2,".",","); ?></td>
 		</tr>
 		<tr>
-			<td>Total</td><td>$ <?php echo number_format($buy->getTotal(),2,".",","); ?></td>
+			<td>Total</td><td><?php echo $coin; ?> <?php echo number_format($buy->getTotal(),2,".",","); ?></td>
 		</tr>
 	</table>
 <br>
@@ -90,8 +93,3 @@ $px = $p->getProduct();
 
 
 <?php endif; ?>
-<style type="text/css">
-	.fondo {
-		background-color: white;
-	}
-</style>

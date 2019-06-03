@@ -8,10 +8,10 @@
   <title>Pizza Home</title>
 
   <link rel="stylesheet" type="text/css" href="res/lib/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="res/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="res/btn-label.css">
-  <script src="res/lib/jquery/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="res/lib/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" type="text/css" href="res/lib/fontawesome/css/all.min.css">
   <link type="text/css" href="res/cssMenu.css" rel="stylesheet">
+  <script src="res/lib/jquery/jquery.min.js"></script>
 
 </head>
 
@@ -25,127 +25,118 @@
         </div>
         <div class="col-md-7 col-xs-5">
           <br><br>
-          <form class="form-horizontal" role="form">
-            <div class="input-group">
-              <input type="hidden" name="view" value="productos">
-              <input type="hidden" name="act" value="search">
-              <input type="text" name="q" placeholder="Buscar productos ..." class="form-control">
-              <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">&nbsp;<i class="fa fa-search"></i>&nbsp;</button>
-              </span>
-            </div><!-- /input-group -->
-          </form>
+          <!---
+<form class="form-horizontal" role="form">
+<div class="input-group">
+<input type="hidden" name="view" value="productos">
+<input type="hidden" name="act" value="search">
+      <input type="text" name="q" placeholder="Buscar productos ..." class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button">&nbsp;<i class="fa fa-search"></i>&nbsp;</button>
+      </span>
+    </div>
+</form>
+-->
           <br><br>
         </div>
         <div class="col-md-2 col-xs-2">
           <!-- cart button -->
           <br><br>
-          <a href="index.php?view=mycart" class="btn btn-block btn-default"><i class="fa fa-shopping-cart"></i>
-            <?php if(isset($_SESSION["cart"])):?>
-            <span class="badge"><?php echo count($_SESSION["cart"]); ?></span>
-            <?php endif; ?>
-          </a>
+
         </div>
 
       </div>
     </div>
-  </section>
-  <nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container fondo1">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header ">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse" class="encabezado1">
-    <nav class="menu1">
-    <ul class="nav navbar-nav" class="menu1">
+    </section>
 
-      <li><a href=""><i  id="menustyle"></i> Home</a></li>
-      <li><a href="./"><i id="fa fa-home" id="menustyle"></i> Menu</a></li>
-      <li><a href="index.php?view=client"><i id="menustyle"></i> Pedido</a></li>
-      <li><a href=""><i id="menustyle"></i> Combos</a></li>
-      <li><a href=""><i id="menustyle"></i> Sucursales</a></li>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <!--  <a class="navbar-brand" href="./">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto" class="menu1">
+            <li class="nav-item active"><a class="nav-link" href="./"><i class="fa fa-home"></i> Inicio</a></li>
+            <li><a href="./"><i id="fa fa-home" id="menustyle"></i> Menu</a></li>
+            <li><a href="index.php?view=client"><i id="menustyle"></i> Pedido</a></li>
+            <li><a href=""><i id="menustyle"></i> Sucursales</a></li>
 
       <li><a href=""><i id="menustyle"></i> Acerca De.</a></li>
-<?php
+            <?php
 $cats = CategoryData::getPublics();
 ?>
-          <?php if(count($cats)>0):?>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th-list"></i> Productos<b
-                class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <?php foreach($cats as $cat):?>
-              <li><a href="index.php?view=productos&cat=<?php echo $cat->short_name; ?>"><?php echo $cat->name; ?></a> 
-              </li>
-              <?php endforeach; ?>
-            </ul>
-          </li>
-          <?php endif; ?>
-                <li><a href="index.php?view=contacto"><i class="fa fa-envelope"></i> Contactanos</a></li> 
-        </ul>
-</nav>
+            <?php if(count($cats)>0):?>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-th-list"></i> Combos
+              </a>
 
-        <ul class="nav navbar-nav navbar-right menu1">
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <?php foreach($cats as $cat):?>
+                <a class="dropdown-item"
+                  href="index.php?view=productos&cat=<?php echo $cat->short_name; ?>"><?php echo $cat->name; ?></a>
+                <?php endforeach; ?>
+              </div>
+            </li>
+            <?php endif; ?>
 
-          <?php if(!isset($_SESSION["client_id"])):?>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>&nbsp; <b
-                class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="admin/index.php?view=login">Administrador</a></li>
-              <li><a href="index.php?view=clientaccess">Iniciar Sesion</a></li>
-              <li><a href="index.php?view=register">Registrarse</a></li>
-            </ul>
-          </li>
-        </ul>
-        <?php else:
-$client = ClientData::getById($_SESSION["client_id"]);
-?>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp;
-            <?php echo $client->name." ".$client->lastname;?><b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="./">Inicio</a></li>
-            <li><a href="logout.php">Salir</a></li>
+
+
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user"></i> Mi cuenta
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <?php if(isset($_SESSION["client_id"])):?>
+                <a class="dropdown-item" href="index.php?view=client">Mi cuenta</a>
+                <a class="dropdown-item" href="logout.php">Salir</a>
+                <?php else:?>
+                <a class="dropdown-item" href="index.php?view=clientaccess">Iniciar sesion</a>
+                <a class="dropdown-item" href="index.php?view=register">Registro</a>
+                <?php endif; ?>
+              </div>
+            </li>
+
           </ul>
-        </li>
-        </ul>
-        <?php endif; ?>
-      </div><!-- /.navbar-collapse -->
-    </div>
-  </nav>
-  <?php View::load("index"); ?>
-  <br><br><br>
-  <section>
-    <div class="container">
+          <form class="form-inline my-2 my-lg-0">
+            <input type="hidden" name="view" value="productos">
+            <input type="hidden" name="act" value="search">
 
-      <!-- - - - -->
-      <div class="row">
-        <div class="col-md-12">
-          <hr>
-          <!-- 
-<p><b>Integrantes: Bryam Barrera,Mateo Cordova,Wilmer Durazno,Daniel Peralta,Javier Yunga </b> &copy; 2019</p>
-<ul class="list-inline">
-<li><p class="text-muted">An <a href="http://evilnapsis.com/">UPS</a> Production</p></li>
-<li><a href="http://evilnapsis.com/services/support/">Soporte</a></li> 
--->
-          </ul>
+            <input class="form-control mr-sm-2" name="q" type="search" placeholder="Buscar ..." aria-label="Buscar ...">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+            &nbsp;
+            <a href="index.php?view=mycart" class="btn  btn-secondary my-2 my-sm-0"><i class="fa fa-shopping-cart"></i>
+              <?php if(isset($_SESSION["cart"])):?>
+              <span class="badge"><?php echo count($_SESSION["cart"]); ?></span>
+              <?php endif; ?>
+            </a>
+
+
+          </form>
         </div>
       </div>
-    </div>
-  </section>
-  <br>
-  <script src="res/lib/bootstrap/js/bootstrap.min.js"></script>
-  <script>
-    $(".tip").tooltip();
-  </script>
+    </nav>
+
+
+
+    <br>
+    <?php View::load("index"); ?>
+    <br><br><br>
+    <br>
+    <script src="res/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(".tip").tooltip();
+    </script>
 </body>
 <footer>
   <div class="pieNombre">

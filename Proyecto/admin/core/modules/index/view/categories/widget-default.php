@@ -31,7 +31,7 @@
     <div class="col-lg-offset-2 col-lg-10">
       <div class="checkbox">
         <label>
-          <input type="checkbox" name="is_public"> Categoria Activa
+          <input type="checkbox" name="is_active"> Categoria Activa
         </label>
       </div>
     </div>
@@ -58,16 +58,26 @@
                   <i class="fa fa-th-list"></i> Categorias
                 </div>
                 <div class="widget-body medium no-padding">
-
-                  <div class="table-responsive">
-                    <table class="table table-bordered">
-                      <tbody>
 <?php
 $categories = CategoryData::getAll();
  if(count($categories)>0):?>
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                    <thead>
+                    <th></th>
+                      <th>Nombre</th>
+                      <th>Activo</th>
+                      <th></th>
+                    </thead>
+                      <tbody>
+
 <?php foreach($categories as $cat):?>
                         <tr>
+                        <td style="width:30px;">
+                          <a href="../?view=productos&cat=<?php echo $cat->short_name; ?>" target="_blank" class="btn btn-default btn-xs"><i class="fa fa-eye"></i></a>
+                        </td>
                         <td><?php echo $cat->name; ?>
+                        <td style="width:70px;"><?php if($cat->is_active):?><center><i class="fa fa-check"></i></center><?php endif;?></td>
 
 
 
@@ -125,29 +135,29 @@ $categories = CategoryData::getAll();
                         </td>
                         </tr>
 <?php endforeach; ?>
- <?php endif; ?>
                       </tbody>
                     </table>
                   </div>
+ <?php endif; ?>
                 </div>
               </div>
             </div>
 
           </div>
-
           <style type="text/css">
-  th {
-    background: rgb(241, 97, 128);
+  th{
+    background: rgb(223, 203, 30);
     opacity: 0.6;
   }
-
-  tr {
-    background: rgb(197, 196, 201);
-
+  tr{
+    background: rgb(203, 214, 209) ;
+    
   }
-
-  body {
-    background: rgba(204, 226, 240, 0.856);
-
+  body{
+    background-color: rgb(88, 126, 126);
+    
   }
-</style>
+  
+  
+  
+  </style>

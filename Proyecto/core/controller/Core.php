@@ -1,4 +1,10 @@
 <?php
+
+
+// 14 de Abril del 2014
+// Core.php
+// @brief obtiene las configuraciones, muestra y carga los contenidos necesarios.
+
 class Core {
 
 	public static function includeCSS(){
@@ -17,6 +23,9 @@ class Core {
 		closedir($handle);
 		}
 
+	}
+	public static function alert($text){
+		echo "<script>alert('".$text."');</script>";
 	}
 
 	public static function redir($url){

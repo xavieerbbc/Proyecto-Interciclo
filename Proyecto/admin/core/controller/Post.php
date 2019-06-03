@@ -1,5 +1,10 @@
 <?php
 
+
+// 13 de Octubre del 2014
+// Post.php
+// @brief esto es algo mucho mas magico
+
 class Post {
 	function __get($value){
 		if(!$this->exist($value)){

@@ -1,12 +1,14 @@
 <?php
 
 if(isset($_POST["accept"])){
+$c= ClientData::getByEmail($_POST["email"]);
+if($c==null){
 $client =  new ClientData();
 $client->name = $_POST["name"];
 $client->lastname = $_POST["lastname"];
 $client->email = $_POST["email"];
 $client->address = $_POST["address"];
-$client->password = crypt($_POST["password"]);
+$client->password = sha1(md5($_POST["password"]));
 $client->phone = $_POST["phone"];
 $client->add();
 
@@ -24,6 +26,7 @@ $client->add();
 						  $patterns[6] = '/%0a/';
 						  $patterns[7] = '/%0d/';
 						 }
+						 //NOTE: can use str_ireplace as this is case insensitive but only available on PHP version 5.0.
 						 return preg_replace($patterns, "", strtolower($value));
 						}
 
@@ -33,10 +36,11 @@ $client->add();
 						$address = clean_input_4email($_POST["address"]);
 						$phone = clean_input_4email($_POST["phone"]);
 //						$message = clean_input_4email($_POST["message"], false);
-$replyemail = "evilnapsis@gmail.com";
+$adminemail = ConfigurationData::getByPreffix("general_main_email")->val;
+$replyemail = $adminemail;
 $success_sent_msg='
 <body style="background:#2b2b2b; text-align:center; margin-top:40px">
-Gracias por contactarnos.
+Registro exitoso.
 </body>
 
 ';
@@ -55,6 +59,7 @@ $replymessage = '
 
 
 $themessage = '
+<html>
 <meta content="es-mx" http-equiv="Content-Language" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -99,15 +104,16 @@ $themessage = '
 	
 </table>
 
-</body>   ';
+</body> 
+</html>  ';
 
 mail("$replyemail",
-     "Nuevo registro",
+     "Katana - Nuevo registro",
      "$themessage",
 	 "From: $replyemail\nReply-To: $replyemail\nContent-Type: text/html; charset=ISO-8859-1");
 
 mail("$email",
-     "Katana",
+     "Katana - Nuevo Registro",
      "$replymessage",
 	 "From: $replyemail\nReply-To: $replyemail\nContent-Type: text/html; charset=ISO-8859-1");
 echo $success_sent_msg;
@@ -115,6 +121,10 @@ echo $success_sent_msg;
 
 
 Core::redir("index.php?view=clientaccess");
+}else{
+Core::alert("Ya existe un usuario registrado con esta direccion email.");
+Core::redir("./?view=register");
 
+}
 }
 ?>

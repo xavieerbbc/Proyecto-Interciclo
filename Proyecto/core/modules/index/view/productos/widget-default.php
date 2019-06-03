@@ -14,13 +14,14 @@ $products = ProductData::getOffers();
 $products = ProductData::getLike($_GET["q"]);
 
 }
-
+$coin = ConfigurationData::getByPreffix("general_coin")->val;
+$img_default = ConfigurationData::getByPreffix("general_img_default")->val;
 
  ?>
 <section>
   <div class="container">
 
-  <div class="row fondo">
+  <div class="row">
 
   <div class="col-md-12">
     <div style="background:#333;font-size:25px;color:white;padding:5px;"><?php 
@@ -34,6 +35,7 @@ $extra = $nproducts%3;
 if($filas>1&& $extra>0){ $filas++; }
 $n=0;
 ?>
+<?php if($nproducts>0):?>
 <?php for($i=0;$i<$filas;$i++):?>
   <div class="row">
 <?php for($j=0;$j<3;$j++):
@@ -44,11 +46,15 @@ $p = $products[$n];
 ?>
 <?php if($p!=null):
 $img = "admin/storage/products/".$p->image;
+if($p->image==""){
+  $img=$img_default;
+}
+
 ?>
   <div class="col-md-4">
  <center>   <img src="<?php echo $img; ?>"  style="width:120px;height:120px;"></center>
   <h4 class="text-center"><?php echo $p->name; ?></h4>
-<h3 class="text-center text-primary">$ <?php echo number_format($p->price,2,".",","); ?></h3>
+<h3 class="text-center text-primary"><?php echo $coin; ?> <?php echo number_format($p->price,2,".",","); ?></h3>
 <?php 
 $in_cart=false;
 if(isset($_SESSION["cart"])){
@@ -63,21 +69,21 @@ if(isset($_SESSION["cart"])){
 <?php
  if(!$p->in_existence):?>
 
-<a href="javascript:void()" class="btn btn-labeled btn-sm btn-warning tip" title="No disponible">
-                <span class="btn-label"><i class="glyphicon glyphicon-shopping-cart"></i></span>No Disponible</a>
+<a href="javascript:void()" class="btn btn-labeled  btn-warning tip" title="No disponible">
+                <span><i class="fa fa-shopping-cart"></i></span> No Disponible</a>
 <br>
 
 <?php elseif(!$in_cart):?>
 
-<a href="index.php?action=addtocart&product_id=<?php echo $p->id; ?>&href=cat" class="btn btn-labeled btn-sm btn-primary tip" title="A&ntilde;adir al carrito">
-                <span class="btn-label"><i class="glyphicon glyphicon-shopping-cart"></i></span>Comprar</a>
+<a href="index.php?action=addtocart&product_id=<?php echo $p->id; ?>&href=cat" class="btn btn-labeled  btn-primary tip" title="A&ntilde;adir al carrito">
+                <span ><i class="fa fa-shopping-cart"></i></span> Comprar</a>
 <br>
 <?php else:?>
-<center><a href="javascript:void()" class="btn btn-labeled btn-sm btn-success tip" title="Ya esta en el carrito">
-                <span class="btn-label"><i class="glyphicon glyphicon-shopping-cart"></i></span>Ya esta agregado</a>
+<center><a href="javascript:void()" class="btn btn-labeled  btn-success tip" title="Ya esta en el carrito">
+                <span ><i class="fa fa-shopping-cart"></i></span> Ya esta agregado</a>
 <br>
 <?php endif; ?>
-<a href="index.php?view=producto&product_id=<?php echo $p->id; ?>">Detalles</a>
+<a href="index.php?view=producto&product_id=<?php echo $p->id; ?>"> Detalles</a>
                 </center>
 
   </div>
@@ -85,7 +91,12 @@ if(isset($_SESSION["cart"])){
 <?php $n++; endfor; ?>
   </div>
 <?php endfor; ?>
-
+<?php else:?>
+  <div class="jumbotron">
+  <h2>No hay productos</h2>
+  <p>No hay productos por mostrar</p>
+  </div>
+<?php endif;?>
 
 
   </div>
@@ -94,8 +105,3 @@ if(isset($_SESSION["cart"])){
 
   </div>
   </section>
-  <style type="text/css">
-	.fondo {
-		background-color: white;
-	}
-</style>

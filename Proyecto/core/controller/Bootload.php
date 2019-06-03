@@ -1,5 +1,10 @@
 <?php
 
+
+// 10 de Octubre del 2014
+// Bootload.php
+// @brief esta clase sirve para alistar los boot
+
 class Bootload {
 	/**
 	* @function load

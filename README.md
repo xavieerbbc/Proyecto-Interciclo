@@ -1,3 +1,6 @@
+PRACTICA INTERCICLO
+Barrera Chungata Bryam Javier, Cordova Alvarez Francis Mateo, Durazno Zapatanga Wilmer John , Peralta Torres Daniel Antonio, Yunga Tacuri Edisson Javier
+
 1. Planificación y requeriemintos:
 
 Introducción

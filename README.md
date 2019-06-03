@@ -71,3 +71,12 @@ RC08	Pago Pedido	Elegir la forma de pago entre las opciones: pago en metálico, 
 RC09	Idioma	Elegir el idioma que desee utilizar entre los idiomas disponibles .
 RC10	Calificacion	Que el cliente pueda calificar el servicio que presta el negocio. 
 
+
+
+![Diagrama_Clases](https://user-images.githubusercontent.com/34029227/58815936-27ec0280-85ee-11e9-916a-a7ae165967cf.png)
+![usos_1](https://user-images.githubusercontent.com/34029227/58815937-27ec0280-85ee-11e9-945d-f78de0a8f414.png)
+![usos_2](https://user-images.githubusercontent.com/34029227/58815938-27ec0280-85ee-11e9-856a-274805ca41b3.png)
+![usos_3](https://user-images.githubusercontent.com/34029227/58815939-28849900-85ee-11e9-817c-f1258cad140c.png)
+![usos_4](https://user-images.githubusercontent.com/34029227/58815940-28849900-85ee-11e9-85ef-8e7f6e42017f.png)
+![usos_5](https://user-images.githubusercontent.com/34029227/58815942-28849900-85ee-11e9-9435-c668efa71e26.png)
+![usos_6](https://user-images.githubusercontent.com/34029227/58815944-291d2f80-85ee-11e9-9469-f459488b714c.png)

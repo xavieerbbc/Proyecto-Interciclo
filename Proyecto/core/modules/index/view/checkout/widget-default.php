@@ -7,7 +7,7 @@ $ivatxt = ConfigurationData::getByPreffix("general_iva_txt")->val;
 
 ?>
 <div class="container">
-	<div class="row">
+	<div class="row fondo">
 
 		<div class="col-md-12">
 			<?php if(!isset($_SESSION["client_id"])):?>
@@ -16,7 +16,7 @@ $ivatxt = ConfigurationData::getByPreffix("general_iva_txt")->val;
 		</div>
 </div>
 
-	<div class="row">
+	<div class="row fondo">
 
 		<div class="col-md-12">
 			<?php if(isset($_SESSION["cart"]) && count($_SESSION["cart"]>0)):?>
@@ -105,3 +105,8 @@ $coupon = CouponData::getById($_SESSION["coupon"]);
 		</div>
 	</div>
 </div>
+<style type=text/css>
+.fondo{
+  background-color: white;
+}
+</style>

@@ -80,7 +80,6 @@ $total += $s["q"]*$p->price;
 	<?php endif; ?>
 
 	</table>
-<br>
 			<?php if(isset($_SESSION["client_id"])):?>
 <form action="index.php?view=checkout" method="post">
 <label>Metodo de pago</label>
@@ -88,12 +87,12 @@ $total += $s["q"]*$p->price;
 <?php foreach(PaymethodData::getActives() as $pay):?>
 	<option value="<?php echo $pay->id; ?>"><?php echo $pay->name; ?></option>
 <?php endforeach; ?>
-</select><br>
-<button class="btn btn-primary btn-block">Confirmar Comprar</button>
+</select>
+<button class="btn btn-primary btn-block boton">Confirmar</button>
+<a href="index.php?action=cleancart" class="btn btn-danger btn-block boton">Limpar</a>
 </form>
 <?php endif; ?>
-<br>
-<a href="index.php?action=cleancart" class="btn btn-danger btn-block">Limpar Carrito</a>
+
 </div>
 </div>
 
@@ -109,7 +108,10 @@ $total += $s["q"]*$p->price;
 		</div>
 	</div>
 
-	<style type=text/css>
+<style type=text/css>
+.boton{
+	font-size:10px !important;	
+}
 .fondo{
   background-color: white;
 }

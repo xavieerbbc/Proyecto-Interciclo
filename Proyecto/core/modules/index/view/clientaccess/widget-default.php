@@ -22,7 +22,7 @@
   </div>
   <div class="form-group">
     <div class="col-lg-12">
-      <button type="submit" class="btn btn-block btn-secondary">Registrarme</button>
+      <button type="submit" class="btn btn-block btn-secondary">Iniciar Sesion</button>
     </div>
   </div>
 </form>

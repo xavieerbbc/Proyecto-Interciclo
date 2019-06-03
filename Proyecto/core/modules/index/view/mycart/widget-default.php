@@ -92,15 +92,9 @@ $total += $s["q"]*$p->price;
 <a href="index.php?action=cleancart" class="btn btn-danger btn-block boton">Limpar</a>
 </form>
 <?php endif; ?>
-<<<<<<< HEAD
-<br>
-=======
 
->>>>>>> fd9bc9e44fea404926e8d819fbf95f9375af59ea
 </div>
 </div>
-
-
 
 			<?php else:
 			?>

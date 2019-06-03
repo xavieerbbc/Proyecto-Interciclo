@@ -58,5 +58,3 @@ $url = "admin/storage/slides/".$s->image;
   <?php endif; ?>
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-  </section>

@@ -12,7 +12,7 @@
 
 <body>
 
-
+  
     <div class="content">
         <h1 class="logo"> Primera Sucursal </h1>
 
@@ -43,14 +43,6 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="footer-social-icons">
-            <div class="derechos">
-                <p>Desarrollado por: Bryam Barrera, Wilmer Durazno, Javier Yunga, Mateo Cordova, Daniel Peralta</p>
-                <p>Copyright &copy; 2019 Todos los derechos reservados</p>
-            </div>
-        </div>
-    </footer>
 </body>
 <style type="text/css">
     /* ESTILOS PARA LA CABECERA */

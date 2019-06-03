@@ -68,7 +68,7 @@ tr{
   
 }
 body{
-  background-image: url(../imagenes/img/fondo-product.jpg);
+  background-image: url(../imagenes/img/fondo-product.jpg) !important;
   
 }
 

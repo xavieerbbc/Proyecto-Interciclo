@@ -56,16 +56,16 @@ $categories = SlideData::getAll();
           <style type="text/css">
   th {
     background: rgb(182, 152, 20);
-    opacity: 0.6;
+    opacity: 0.6!important;
   }
 
   tr {
-    background: rgb(197, 196, 201);
+    background: rgb(197, 196, 201) !important;
 
   }
 
   body {
-    background: rgb(233, 226, 214);
+    background: rgb(233, 226, 214)!important;
 
   }
 </style>

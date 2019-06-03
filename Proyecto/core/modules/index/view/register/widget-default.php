@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="row">
+	<div class="row fondo">
 		<div class="col-md-6">
     <h3>Registrate para poder participar y comprar!</h3>  
     <p>Si gustas participar en preguntas o deseas comprar, es requerimiento obligatorio registrarse utilizando el formulario de la derecha y ofrecer datos fidedignos.</p>
@@ -70,3 +70,9 @@
 		</div>
 	</div>
 </div>
+
+<style type=text/css>
+.fondo{
+  background-color: white;
+}
+</style>

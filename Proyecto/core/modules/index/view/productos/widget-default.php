@@ -21,7 +21,7 @@ $img_default = ConfigurationData::getByPreffix("general_img_default")->val;
 <section>
   <div class="container">
 
-  <div class="row">
+  <div class="row fondo">
 
   <div class="col-md-12">
     <div style="background:#333;font-size:25px;color:white;padding:5px;"><?php 
@@ -105,3 +105,8 @@ if(isset($_SESSION["cart"])){
 
   </div>
   </section>
+  <style type=text/css>
+.fondo{
+  background-color: white;
+}
+</style>

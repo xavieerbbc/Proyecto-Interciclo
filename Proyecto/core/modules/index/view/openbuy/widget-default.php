@@ -13,7 +13,7 @@ $products = BuyProductData::getAllByBuyId($buy->id);
 
 ?>
 <div class="container">
-<div class="row">
+<div class="row fondo">
 
 <div class="col-md-12">
 <h3>Bienvenido, <?php echo $client->name." ".$client->lastname; ?></h3>
@@ -25,7 +25,7 @@ $products = BuyProductData::getAllByBuyId($buy->id);
 </div>
 <br>
 <div class="container">
-<div class="row">
+<div class="row fondo">
 	<div class="col-md-12">
 <?php if($buy->status_id==1):?>
 <p class="alert alert-warning">Operacion Pendiente</p>
@@ -93,3 +93,8 @@ $px = $p->getProduct();
 
 
 <?php endif; ?>
+<style type=text/css>
+.fondo{
+  background-color: white;
+}
+</style>

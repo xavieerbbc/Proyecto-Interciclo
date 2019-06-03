@@ -12,6 +12,9 @@ $featureds = ProductData::getFeatureds();
 
   <div class="col-md-12">
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+   
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <?php
 
 $nproducts = count($featureds);

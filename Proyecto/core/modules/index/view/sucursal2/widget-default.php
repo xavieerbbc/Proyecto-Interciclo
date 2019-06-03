@@ -13,19 +13,18 @@
 <body>
 
     <div class="content">
-        <h1 class="logo">Sucursal Matriz </h1>
+        <h1 class="logo"> Segunda Sucursal </h1>
 
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h3>Contáctanos</h3>
                 <form>
                     <div class="sppb-addon-content">
-                        <h3>NOMBRE</h3>
-                        <p>Pizzeria Gonzalez Suarez</p>
-                        <h3>DIRECCI&Oacute;N</h3>
-                        <p>Av. Gonzalez Suarez, Calle Gral. José de San Martin</p>
-                        <h3>TEL&Eacute;FONOS</h3>
+                        <h1>DIRECCI&Oacute;N</h1>
+                        <p>Avenida Felipe II, Jose Ortega y Gasset</p>
+                        <h1>TEL&Eacute;FONOS</h1>
                         <p>1700-007-007 o (2)3993200</p>
+                        <h1>Ubicación</h1>
 
                     </div>
                 </form>
@@ -40,16 +39,7 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="footer-social-icons">
-            <div class="derechos">
-                <p>Desarrollado por: Bryam Barrera, Wilmer Durazno, Javier Yunga, Mateo Cordova, Daniel Peralta</p>
-                <p>Copyright &copy; 2019 Todos los derechos reservados</p>
-            </div>
-        </div>
-    </footer>
 </body>
-
 <style type="text/css">
     /* ESTILOS PARA LA CABECERA */
 

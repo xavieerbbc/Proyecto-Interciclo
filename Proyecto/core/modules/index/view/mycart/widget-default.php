@@ -1,95 +1,118 @@
-<?php 
+    
+<?php
+$total = 0;
+$iva = ConfigurationData::getByPreffix("general_iva")->val;
 $coin_symbol = ConfigurationData::getByPreffix("general_coin")->val;
-$img_default = ConfigurationData::getByPreffix("general_img_default")->val;
-$cnt=0;
-$slides = SlideData::getPublics();
-$featureds = ProductData::getFeatureds();
+$ivatxt = ConfigurationData::getByPreffix("general_iva_txt")->val;
 ?>
-<section>
-  <div class="container">
+<div class="container">
+	<div class="row fondo">
 
-  <div class="row">
+		<div class="col-md-12">
+			<?php if(!isset($_SESSION["client_id"])):?>
+				<p class="alert alert-danger">Debes registrarte e iniciar sesion para proceder.</p>
+			<?php endif; ?>
+		</div>
+</div>
 
-  <div class="col-md-12">
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<?php
+	<div class="row fondo">
 
-$nproducts = count($featureds);
-$filas = $nproducts/3;
-$extra = $nproducts%3;
-if($filas>1&& $extra>0){ $filas++; }
-$n=0;
-?>
-<?php if(count($featureds)>0):?>
-<a href="./"><div style="background:#333;font-size:25px;color:white;padding:5px;">Productos Destacados</div></a>
-<br>
-<?php for($i=0;$i<$filas;$i++):?>
-  <div class="row">
-<?php for($j=0;$j<3;$j++):
-$p=null;
-if($n<$nproducts){
-$p = $featureds[$n];
-}
-?>
-<?php if($p!=null):
-$img = "admin/storage/products/".$p->image;
-if($p->image==""){
-  $img=$img_default;
-}
-?>
-  <div class="col-md-4">
- <center>   <img src="<?php echo $img; ?>"  style="width:120px;height:120px;"></center>
-  <h4 class="text-center"><?php echo $p->name; ?></h4>
-<h3 class="text-center text-primary"> <?php echo $coin_symbol." ".number_format($p->price,2,".",","); ?></h3>
+		<div class="col-md-12">
+			<?php if(isset($_SESSION["cart"]) && count($_SESSION["cart"]>0)):?>
+		</div>
+		<h2>Mi Carrito</h2>
+<table class="table table-bordered">
+<thead>
+	<th>Codigo</th>
+	<th>Producto</th>
+	<th>Cantidad</th>
+	<th>Precio Unitario</th>
+	<th>Total</th>
+	<th></th>
+</thead>
 <?php 
-$in_cart=false;
-if(isset($_SESSION["cart"])){
-  foreach ($_SESSION["cart"] as $pc) {
-    if($pc["product_id"]==$p->id){ $in_cart=true;  }
-  }
-  }
-
-  ?>
-<center>
-
+foreach($_SESSION["cart"] as $s):?>
+<?php $p = ProductData::getById($s["product_id"]); ?>
+<tr>
+<td><?php echo $p->code; ?></td>
+<td><?php echo $p->name; ?></td>
+<td style="width:100px;">
+<form id="p-<?=$s["product_id"];?>">
+<input type="hidden" name="p_id" value="<?=$s["product_id"];?>">
+<input type="number" name="q" id="num-<?=$s["product_id"];?>" value="<?php echo $s["q"]; ?>" class="form-control">
+</form>
+<script>
+	$("#num-<?=$s['product_id'];?>").change(function(){
+		$.post("./?action=editcart",$("#p-<?=$s['product_id']?>").serialize()	,function(data){
+			window.location = window.location;
+		});
+	});
+</script>
+</td>
+<td><h4><?php echo $coin_symbol; ?> <?php echo $p->price; ?></h4> </td>
+<td><h4><?php echo $coin_symbol; ?> <?php echo $p->price*$s["q"]; ?></h4> </td>
+<td style="width:30px;"><a href="index.php?action=deletefromcart&product_id=<?php echo $p->id; ?>&href=cart" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
 <?php
- if(!$p->in_existence):?>
+$total += $s["q"]*$p->price;
+ endforeach; ?>
+</tr>
+</table>
 
-<a href="javascript:void()" class="btn btn-labeled btn-warning tip" title="No disponible">
-                <span ><i class="fa fa-shopping-cart"></i></span> No Disponible</a>
-<br>
 
-<?php elseif(!$in_cart):?>
+<div class="row">
+<div class="col-md-5">
 
-<a href="index.php?action=addtocart&product_id=<?php echo $p->id; ?>&href=cat" class="btn btn-labeled btn-primary tip" title="A&ntilde;adir al carrito">
-                <span class=""><i class="fa fa-shopping-cart"></i></span> Comprar</a>
-<br>
-<?php else:?>
-<center><a href="javascript:void()" class="btn btn-labeled btn-success tip" title="Ya esta en el carrito">
-                <span ><i class="fa fa-shopping-cart"></i></span> Ya esta agregado</a>
-<br>
+</div>
+<div class="col-md-5 col-md-offset-2">
+	<table class="table table-bordered">
+		<tr>
+			<td>Subtotal</td><td><?php echo $coin_symbol; ?> <?php echo number_format($total-($total*($iva/100)),2,".",","); ?></td>
+		</tr>
+		<tr>
+			<td><?php echo $ivatxt; ?></td><td><?php echo $coin_symbol; ?> <?php echo number_format($total*($iva/100),2,".",","); ?></td>
+		</tr>
+		<?php if(isset($_SESSION["coupon"])):?>
+	<?php else:?>
+		<tr>
+			<td>Total</td><td><?php echo $coin_symbol; ?> <?php echo number_format($total,2,".",","); ?></td>
+		</tr>
+
+	<?php endif; ?>
+
+	</table>
+			<?php if(isset($_SESSION["client_id"])):?>
+<form action="index.php?view=checkout" method="post">
+<label>Metodo de pago</label>
+<select class="form-control" required name="paymethod_id">
+<?php foreach(PaymethodData::getActives() as $pay):?>
+	<option value="<?php echo $pay->id; ?>"><?php echo $pay->name; ?></option>
+<?php endforeach; ?>
+</select>
+<button class="btn btn-primary btn-block boton">Confirmar</button>
+<a href="index.php?action=cleancart" class="btn btn-danger btn-block boton">Limpar</a>
+</form>
 <?php endif; ?>
-<a href="index.php?view=producto&product_id=<?php echo $p->id; ?>">Detalles</a>
-                </center>
 
-  </div>
-<?php endif; ?>
-<?php $n++; endfor; ?>
-  </div>
-<?php endfor; ?>
-<?php else:?>
-  <div class="jumbotron">
-  <h2>No hay productos destacados.</h2>
-  <p>En la pagina principal solo se muestran productos marcados como destacados.</p>
-  </div>
-<?php endif; ?>
+</div>
+</div>
 
 
 
-  </div>
+			<?php else:
+			?>
+				<div class="jumbotron">
+				<h2>No hay productos</h2>
+				<p>No ha agregado productos al carrito.</p>
+				</div>
+			<?php endif; ?>
+		</div>
+	</div>
 
-  </div>
-
-
-  </div>
-  </section>
+<style type=text/css>
+.boton{
+	font-size:10px !important;	
+}
+.fondo{
+  background-color: white;
+}
+</style>

@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    
+            </div><!-- /.navbar-collapse -->
+        </div>
     </nav>
     <br><br><br><br><br><br><br><br><br>
     <section class="Cuerposomos">
